@@ -2,120 +2,41 @@
   <div class="editor-view">
     <!-- Upload area (shown when no files loaded) -->
     <div
-      v-if="!store.xbsBuffer && !store.jsonText"
+      v-if="!store.jsonText"
       class="upload-area"
     >
       <div class="upload-grid">
         <DropZone
           accept=".xbs"
           icon="🔒"
-          title="导入 XBS 文件"
-          sub="香色闺阁书源二进制格式"
+          title="导入 XBS"
+          sub="自动解密并展示为 JSON"
           @file="store.loadXbsFile"
         />
         <div class="upload-or">or</div>
         <DropZone
           accept=".json"
           icon="📝"
-          title="导入 JSON 文件"
-          sub="已解密的书源 JSON 格式"
+          title="导入 JSON"
+          sub="加载现有明文 JSON"
           @file="store.loadJsonFile"
         />
       </div>
       <p class="upload-hint">
-        拖拽文件到此处，或点击选择 · 数据仅在浏览器本地处理，不上传至任何服务器
+        拖拽文件到此处，或点击选择 · 系统会在浏览器本地处理，不上传数据
       </p>
     </div>
 
-    <!-- Editor panels -->
+    <!-- Editor panel -->
     <div
       v-else
       class="panels"
     >
-      <!-- Left: XBS binary preview -->
+      <!-- Single Full-Width JSON editor -->
       <div class="panel">
         <div class="panel-head">
           <span class="panel-label">
-            <span class="dot dot-blue"></span>XBS 文件
-          </span>
-          <span
-            v-if="store.xbsSize"
-            class="panel-meta"
-            >{{ store.xbsFileName }}.xbs · {{ store.xbsSize }}</span
-          >
-          <div class="panel-acts">
-            <label
-              class="btn btn-sm btn-muted"
-              title="重新上传 XBS"
-            >
-              📂
-              <input
-                type="file"
-                accept=".xbs"
-                @change="onXbsFile"
-              />
-            </label>
-            <button
-              class="btn btn-sm btn-primary"
-              :disabled="!store.xbsBuffer"
-              @click="store.downloadXbs"
-            >
-              ⬇ 下载
-            </button>
-          </div>
-        </div>
-        <div
-          class="hex-view"
-          ref="hexRef"
-        >
-          <pre v-if="hexLines.length">{{ hexLines.join("\n") }}</pre>
-          <div
-            v-else
-            class="empty-hint"
-          >
-            <span>🔒</span>
-            <p>暂无 XBS 文件</p>
-            <label class="btn btn-sm btn-primary mt">
-              选择文件
-              <input
-                type="file"
-                accept=".xbs"
-                @change="onXbsFile"
-              />
-            </label>
-          </div>
-        </div>
-      </div>
-
-      <!-- Center: convert buttons -->
-      <div class="center-col">
-        <button
-          class="btn btn-convert btn-primary"
-          :disabled="!store.xbsBuffer || store.isConverting"
-          @click="store.convertXbs2Json"
-          title="XBS 解密 → JSON"
-        >
-          <span v-if="store.isConverting">⏳</span>
-          <span v-else>🔓</span>
-          <span class="convert-label">XBS<br />→<br />JSON</span>
-        </button>
-        <button
-          class="btn btn-convert btn-warn"
-          :disabled="!store.jsonText || store.isConverting"
-          @click="store.convertJson2Xbs"
-          title="JSON 加密 → XBS"
-        >
-          <span v-if="store.isConverting">⏳</span>
-          <span v-else>🔐</span>
-          <span class="convert-label">JSON<br />→<br />XBS</span>
-        </button>
-      </div>
-
-      <!-- Right: JSON editor -->
-      <div class="panel">
-        <div class="panel-head">
-          <span class="panel-label">
-            <span class="dot dot-green"></span>JSON 内容
+            <span class="dot dot-green"></span>书源内容 (JSON)
           </span>
           <span
             v-if="store.jsonSize"
@@ -138,14 +59,7 @@
               class="btn btn-sm btn-muted"
               @click="store.formatJson"
             >
-              ✨ 格式化
-            </button>
-            <button
-              class="btn btn-sm btn-success"
-              :disabled="!store.jsonText"
-              @click="store.downloadJson"
-            >
-              ⬇ 下载
+              ✨ 格式化 JSON
             </button>
           </div>
         </div>
@@ -159,13 +73,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed } from "vue";
 import { useEditorStore } from "@/stores/editor";
 import DropZone from "@/components/DropZone.vue";
 import JsonEditor from "@/components/JsonEditor.vue";
 
 const store = useEditorStore();
-const hexRef = ref<HTMLDivElement>();
 
 const jsonTextProxy = computed({
   get: () => store.jsonText,
@@ -174,39 +87,6 @@ const jsonTextProxy = computed({
   },
 });
 
-const hexLines = computed(() => {
-  if (!store.xbsBuffer) return [];
-  const bytes = new Uint8Array(store.xbsBuffer);
-  const lines: string[] = [];
-  const perRow = 16;
-  const maxRows = 512;
-  for (let i = 0; i < Math.min(bytes.length, perRow * maxRows); i += perRow) {
-    const slice = bytes.slice(i, i + perRow);
-    const hex = Array.from(slice)
-      .map((b) => b.toString(16).padStart(2, "0"))
-      .join(" ");
-    const ascii = Array.from(slice)
-      .map((b) => (b >= 32 && b < 127 ? String.fromCharCode(b) : "."))
-      .join("");
-    lines.push(
-      `${i.toString(16).padStart(8, "0")}  ${hex.padEnd(47)}  |${ascii}|`,
-    );
-  }
-  if (bytes.length > perRow * maxRows) {
-    lines.push(
-      `… (仅显示前 ${maxRows * perRow} 字节，共 ${bytes.length} 字节)`,
-    );
-  }
-  return lines;
-});
-
-function onXbsFile(e: Event) {
-  const f = (e.target as HTMLInputElement).files?.[0];
-  if (f) {
-    store.loadXbsFile(f);
-    (e.target as HTMLInputElement).value = "";
-  }
-}
 function onJsonFile(e: Event) {
   const f = (e.target as HTMLInputElement).files?.[0];
   if (f) {
@@ -341,29 +221,6 @@ function onJsonFile(e: Event) {
 }
 
 /* Hex view */
-.hex-view {
-  flex: 1;
-  overflow: auto;
-  background: var(--surface);
-}
-.hex-view pre {
-  padding: 12px 16px;
-  font-family:
-    "JetBrains Mono", "Fira Code", "Cascadia Code", "SF Mono", monospace;
-  font-size: 12.5px;
-  line-height: 1.65;
-  color: var(--text2);
-  white-space: pre;
-  margin: 0;
-}
-.hex-view::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-.hex-view::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 3px;
-}
 
 .empty-hint {
   display: flex;
@@ -383,36 +240,6 @@ function onJsonFile(e: Event) {
 }
 
 /* Center column */
-.center-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: var(--bg);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 0 6px;
-}
-.btn-convert {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  width: 48px;
-  height: 80px;
-  border-radius: 10px;
-  font-size: 18px;
-  padding: 0;
-}
-.convert-label {
-  font-size: 10px;
-  line-height: 1.3;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 0;
-}
 
 /* Flex fill for JsonEditor */
 .flex-fill {
@@ -458,13 +285,6 @@ function onJsonFile(e: Event) {
 .btn-success:hover {
   filter: brightness(1.1);
 }
-.btn-warn {
-  background: linear-gradient(135deg, #d97706, #fbbf24);
-  color: #fff;
-}
-.btn-warn:hover {
-  filter: brightness(1.1);
-}
 .btn-muted {
   background: var(--surface2);
   color: var(--text2);
@@ -489,13 +309,6 @@ function onJsonFile(e: Event) {
     border-radius: 0 0 12px 12px;
     border-left: 1px solid var(--border);
     border-top: none;
-  }
-  .center-col {
-    flex-direction: row;
-    border: none;
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    padding: 6px 0;
   }
 }
 </style>

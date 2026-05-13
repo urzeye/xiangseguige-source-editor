@@ -47,7 +47,7 @@ export const useEditorStore = defineStore("editor", () => {
     const reader = new FileReader();
     reader.onload = (e) => {
       xbsBuffer.value = e.target!.result as ArrayBuffer;
-      toast(`已载入 ${file.name} (${formatBytes(file.size)})`, "info");
+      convertXbs2Json(); // Automatically decrypt when loaded
     };
     reader.readAsArrayBuffer(file);
   }
@@ -115,8 +115,15 @@ export const useEditorStore = defineStore("editor", () => {
 
   // ── Download ───────────────────────────────────────
   function downloadXbs() {
+    if (!jsonText.value.trim()) {
+      toast("没有 JSON 内容可供导出为 XBS", "err");
+      return;
+    }
+    // Automatically encrypt before downloading
+    convertJson2Xbs();
+    
     if (!xbsBuffer.value) {
-      toast("没有 XBS 内容可下载", "err");
+      toast("XBS 转换失败", "err");
       return;
     }
     downloadBlob(
@@ -124,7 +131,6 @@ export const useEditorStore = defineStore("editor", () => {
       `${xbsFileName.value}.xbs`,
       "application/octet-stream",
     );
-    toast("XBS 文件下载中…", "ok");
   }
 
   function downloadJson() {
@@ -137,7 +143,6 @@ export const useEditorStore = defineStore("editor", () => {
       `${jsonFileName.value}.json`,
       "application/json",
     );
-    toast("JSON 文件下载中…", "ok");
   }
 
   // ── Format ─────────────────────────────────────────
