@@ -121,7 +121,7 @@ export const useEditorStore = defineStore("editor", () => {
     }
     // Automatically encrypt before downloading
     convertJson2Xbs();
-    
+
     if (!xbsBuffer.value) {
       toast("XBS 转换失败", "err");
       return;

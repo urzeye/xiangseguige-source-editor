@@ -420,20 +420,23 @@ body {
 .mt {
   margin-top: 12px;
 }
+</style>
 
-/* ── Global Buttons (Stripe Style) ── */
+<style>
+/* ── Global Buttons (Vercel/Linear Style) ── */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  border: none;
-  border-radius: 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 13px;
-  font-weight: 600;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 500;
+  transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
+  font-family: inherit;
 }
 .btn:active {
   transform: scale(0.97);
@@ -446,27 +449,59 @@ body {
 }
 
 .btn-sm {
-  padding: 6px 14px;
+  padding: 6px 12px;
   font-size: 13px;
+}
+
+.btn-xs {
+  padding: 4px 10px;
+  font-size: 12px;
 }
 
 .btn-primary {
   background: var(--accent);
   color: #fff;
+  border-color: var(--accent);
   box-shadow: var(--shadow-sm);
 }
 .btn-primary:hover:not(:disabled) {
   background: var(--accent-hover);
+  border-color: var(--accent-hover);
   box-shadow: var(--shadow-md);
 }
 
 .btn-success {
   background: var(--green);
   color: #fff;
+  border-color: var(--green);
   box-shadow: var(--shadow-sm);
 }
 .btn-success:hover:not(:disabled) {
   background: var(--green-hover);
+  border-color: var(--green-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-warn {
+  background: var(--yellow);
+  color: #fff;
+  border-color: var(--yellow);
+  box-shadow: var(--shadow-sm);
+}
+.btn-warn:hover:not(:disabled) {
+  filter: brightness(0.9);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-danger {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+  box-shadow: var(--shadow-sm);
+}
+.btn-danger:hover:not(:disabled) {
+  background: var(--red-hover);
+  border-color: var(--red-hover);
   box-shadow: var(--shadow-md);
 }
 
@@ -474,11 +509,11 @@ body {
   background: var(--surface);
   color: var(--text2);
   border: 1px solid var(--border);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 .btn-muted:hover:not(:disabled) {
   border-color: var(--border-focus);
   color: var(--text);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
 }
 </style>
