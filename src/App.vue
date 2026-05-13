@@ -89,21 +89,87 @@
           >
             <span class="topbar-sep"></span>
             <!-- XBS Split Button -->
-            <div class="split-btn" ref="xbsRef">
-              <button class="btn btn-sm btn-primary split-main" @click="store.downloadXbs">⬇ XBS</button>
-              <button class="btn btn-sm btn-primary split-arrow" @click.stop="xbsOpen = !xbsOpen">▾</button>
-              <div v-if="xbsOpen" class="split-menu">
-                <button class="split-item" @click="store.downloadXbs; xbsOpen = false">全部导出</button>
-                <button class="split-item" :disabled="store.enabledCount === 0" @click="store.downloadXbsEnabled; xbsOpen = false">仅导出启用（{{ store.enabledCount }} 条）</button>
+            <div
+              class="split-btn"
+              ref="xbsRef"
+            >
+              <button
+                class="btn btn-sm btn-primary split-main"
+                @click="store.downloadXbs"
+              >
+                ⬇ XBS
+              </button>
+              <button
+                class="btn btn-sm btn-primary split-arrow"
+                @click.stop="xbsOpen = !xbsOpen"
+              >
+                ▾
+              </button>
+              <div
+                v-if="xbsOpen"
+                class="split-menu"
+              >
+                <button
+                  class="split-item"
+                  @click="
+                    store.downloadXbs;
+                    xbsOpen = false;
+                  "
+                >
+                  全部导出
+                </button>
+                <button
+                  class="split-item"
+                  :disabled="store.enabledCount === 0"
+                  @click="
+                    store.downloadXbsEnabled;
+                    xbsOpen = false;
+                  "
+                >
+                  仅导出启用（{{ store.enabledCount }} 条）
+                </button>
               </div>
             </div>
             <!-- JSON Split Button -->
-            <div class="split-btn" ref="jsonRef">
-              <button class="btn btn-sm btn-success split-main" @click="store.downloadJson">⬇ JSON</button>
-              <button class="btn btn-sm btn-success split-arrow" @click.stop="jsonOpen = !jsonOpen">▾</button>
-              <div v-if="jsonOpen" class="split-menu">
-                <button class="split-item" @click="store.downloadJson; jsonOpen = false">全部导出</button>
-                <button class="split-item" :disabled="store.enabledCount === 0" @click="store.downloadJsonEnabled; jsonOpen = false">仅导出启用（{{ store.enabledCount }} 条）</button>
+            <div
+              class="split-btn"
+              ref="jsonRef"
+            >
+              <button
+                class="btn btn-sm btn-success split-main"
+                @click="store.downloadJson"
+              >
+                ⬇ JSON
+              </button>
+              <button
+                class="btn btn-sm btn-success split-arrow"
+                @click.stop="jsonOpen = !jsonOpen"
+              >
+                ▾
+              </button>
+              <div
+                v-if="jsonOpen"
+                class="split-menu"
+              >
+                <button
+                  class="split-item"
+                  @click="
+                    store.downloadJson;
+                    jsonOpen = false;
+                  "
+                >
+                  全部导出
+                </button>
+                <button
+                  class="split-item"
+                  :disabled="store.enabledCount === 0"
+                  @click="
+                    store.downloadJsonEnabled;
+                    jsonOpen = false;
+                  "
+                >
+                  仅导出启用（{{ store.enabledCount }} 条）
+                </button>
               </div>
             </div>
           </template>
@@ -152,8 +218,10 @@ const xbsRef = ref<HTMLElement | null>(null);
 const jsonRef = ref<HTMLElement | null>(null);
 
 function onDocClick(e: MouseEvent) {
-  if (xbsRef.value && !xbsRef.value.contains(e.target as Node)) xbsOpen.value = false;
-  if (jsonRef.value && !jsonRef.value.contains(e.target as Node)) jsonOpen.value = false;
+  if (xbsRef.value && !xbsRef.value.contains(e.target as Node))
+    xbsOpen.value = false;
+  if (jsonRef.value && !jsonRef.value.contains(e.target as Node))
+    jsonOpen.value = false;
 }
 onMounted(() => document.addEventListener("click", onDocClick));
 onUnmounted(() => document.removeEventListener("click", onDocClick));

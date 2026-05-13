@@ -137,7 +137,11 @@ export function useSourceChecker() {
     const signal = controller.signal;
 
     const tasks = sources.map((source, i) => async () => {
-      results.value[i] = { ...results.value[i], status: "checking", detail: "检测中…" };
+      results.value[i] = {
+        ...results.value[i],
+        status: "checking",
+        detail: "检测中…",
+      };
       const r = await checkOne(source, kw, timeout.value, signal);
       results.value[i] = { ...results.value[i], ...r };
     });
@@ -158,5 +162,14 @@ export function useSourceChecker() {
     );
   }
 
-  return { results, running, keyword, concurrency, timeout, summary, start, stop };
+  return {
+    results,
+    running,
+    keyword,
+    concurrency,
+    timeout,
+    summary,
+    start,
+    stop,
+  };
 }

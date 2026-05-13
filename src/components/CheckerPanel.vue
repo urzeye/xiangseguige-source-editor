@@ -1,12 +1,20 @@
 <template>
   <Teleport to="body">
     <Transition name="checker-slide">
-      <div v-if="open" class="checker-panel">
+      <div
+        v-if="open"
+        class="checker-panel"
+      >
         <!-- Header -->
         <div class="cp-head">
           <span class="cp-title">🔍 有效性检测</span>
           <div class="cp-head-note">通过搜索 API 检测书源是否可达</div>
-          <button class="cp-close" @click="$emit('close')">✕</button>
+          <button
+            class="cp-close"
+            @click="$emit('close')"
+          >
+            ✕
+          </button>
         </div>
 
         <!-- Controls -->
@@ -20,14 +28,32 @@
           />
           <label class="cp-opt">
             <span>并发</span>
-            <select v-model.number="checker.concurrency.value" :disabled="checker.running.value">
-              <option v-for="n in [1,3,5,10,20]" :key="n" :value="n">{{ n }}</option>
+            <select
+              v-model.number="checker.concurrency.value"
+              :disabled="checker.running.value"
+            >
+              <option
+                v-for="n in [1, 3, 5, 10, 20]"
+                :key="n"
+                :value="n"
+              >
+                {{ n }}
+              </option>
             </select>
           </label>
           <label class="cp-opt">
             <span>超时 (s)</span>
-            <select v-model.number="checker.timeout.value" :disabled="checker.running.value">
-              <option v-for="n in [5,8,10,15,20]" :key="n" :value="n">{{ n }}</option>
+            <select
+              v-model.number="checker.timeout.value"
+              :disabled="checker.running.value"
+            >
+              <option
+                v-for="n in [5, 8, 10, 15, 20]"
+                :key="n"
+                :value="n"
+              >
+                {{ n }}
+              </option>
             </select>
           </label>
           <button
@@ -38,11 +64,20 @@
           >
             开始检测
           </button>
-          <button v-else class="btn btn-sm btn-danger" @click="checker.stop">停止</button>
+          <button
+            v-else
+            class="btn btn-sm btn-danger"
+            @click="checker.stop"
+          >
+            停止
+          </button>
         </div>
 
         <!-- Progress bar -->
-        <div class="cp-progress-wrap" v-if="checker.results.value.length > 0">
+        <div
+          class="cp-progress-wrap"
+          v-if="checker.results.value.length > 0"
+        >
           <div class="cp-progress-bar">
             <div
               class="cp-progress-fill"
@@ -59,7 +94,10 @@
 
         <!-- Results list -->
         <div class="cp-list">
-          <div v-if="checker.results.value.length === 0" class="cp-empty">
+          <div
+            v-if="checker.results.value.length === 0"
+            class="cp-empty"
+          >
             输入关键词并点击「开始检测」
           </div>
           <div
@@ -69,8 +107,14 @@
             :class="r.status"
           >
             <span class="cp-status-icon">{{ statusIcon(r.status) }}</span>
-            <span class="cp-name" :title="r.name">{{ r.name }}</span>
-            <span class="cp-detail">{{ r.detail }}<span v-if="r.ms"> · {{ r.ms }}ms</span></span>
+            <span
+              class="cp-name"
+              :title="r.name"
+              >{{ r.name }}</span
+            >
+            <span class="cp-detail"
+              >{{ r.detail }}<span v-if="r.ms"> · {{ r.ms }}ms</span></span
+            >
           </div>
         </div>
       </div>
@@ -95,7 +139,8 @@ const progress = computed(() => {
 
 function statusIcon(status: string) {
   return (
-    { pending: "○", checking: "⌛", ok: "✓", err: "✗", skip: "—" }[status] ?? "?"
+    { pending: "○", checking: "⌛", ok: "✓", err: "✗", skip: "—" }[status] ??
+    "?"
   );
 }
 
@@ -226,18 +271,31 @@ function tryStart() {
   font-size: 12px;
   font-weight: 600;
 }
-.sum-ok { color: var(--green); }
-.sum-err { color: var(--red); }
-.sum-skip { color: var(--text3); }
-.sum-total { color: var(--text2); }
+.sum-ok {
+  color: var(--green);
+}
+.sum-err {
+  color: var(--red);
+}
+.sum-skip {
+  color: var(--text3);
+}
+.sum-total {
+  color: var(--text2);
+}
 
 .cp-list {
   flex: 1;
   overflow-y: auto;
   min-height: 0;
 }
-.cp-list::-webkit-scrollbar { width: 4px; }
-.cp-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.cp-list::-webkit-scrollbar {
+  width: 4px;
+}
+.cp-list::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
 
 .cp-empty {
   text-align: center;
@@ -258,11 +316,21 @@ function tryStart() {
 .cp-row:hover {
   background: var(--surface2);
 }
-.cp-row.ok { border-left: 3px solid var(--green); }
-.cp-row.err { border-left: 3px solid var(--red); }
-.cp-row.checking { border-left: 3px solid var(--yellow); }
-.cp-row.skip { border-left: 3px solid var(--border); }
-.cp-row.pending { border-left: 3px solid transparent; }
+.cp-row.ok {
+  border-left: 3px solid var(--green);
+}
+.cp-row.err {
+  border-left: 3px solid var(--red);
+}
+.cp-row.checking {
+  border-left: 3px solid var(--yellow);
+}
+.cp-row.skip {
+  border-left: 3px solid var(--border);
+}
+.cp-row.pending {
+  border-left: 3px solid transparent;
+}
 
 .cp-status-icon {
   flex-shrink: 0;
@@ -270,9 +338,15 @@ function tryStart() {
   text-align: center;
   font-size: 12px;
 }
-.cp-row.ok .cp-status-icon { color: var(--green); }
-.cp-row.err .cp-status-icon { color: var(--red); }
-.cp-row.checking .cp-status-icon { color: var(--yellow); }
+.cp-row.ok .cp-status-icon {
+  color: var(--green);
+}
+.cp-row.err .cp-status-icon {
+  color: var(--red);
+}
+.cp-row.checking .cp-status-icon {
+  color: var(--yellow);
+}
 
 .cp-name {
   flex: 0 0 200px;
