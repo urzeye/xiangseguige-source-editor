@@ -84,6 +84,35 @@
               ⬇ 导出 JSON
             </button>
           </template>
+          <template v-if="store.activeTab === 'sources' && store.sourceCount > 0">
+            <span class="topbar-sep"></span>
+            <button
+              class="btn btn-sm btn-primary"
+              @click="store.downloadXbs"
+            >
+              ⬇ 导出 XBS（全部）
+            </button>
+            <button
+              class="btn btn-sm btn-success"
+              @click="store.downloadJson"
+            >
+              ⬇ 导出 JSON（全部）
+            </button>
+            <button
+              class="btn btn-sm btn-muted"
+              :disabled="store.enabledCount === 0"
+              @click="store.downloadXbsEnabled"
+            >
+              ⬇ 导出 XBS（仅启用）
+            </button>
+            <button
+              class="btn btn-sm btn-muted"
+              :disabled="store.enabledCount === 0"
+              @click="store.downloadJsonEnabled"
+            >
+              ⬇ 导出 JSON（仅启用）
+            </button>
+          </template>
         </div>
       </header>
 
@@ -363,13 +392,21 @@ body {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 .topbar-actions label {
   cursor: pointer;
 }
 .topbar-actions input {
   display: none;
+}
+.topbar-sep {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 4px;
 }
 
 /* ── Content Area ── */

@@ -145,6 +145,40 @@ export const useEditorStore = defineStore("editor", () => {
     );
   }
 
+  function downloadJsonEnabled() {
+    const enabled = sources.value.filter((s) => s.enable).map((s) => s._raw);
+    if (enabled.length === 0) {
+      toast("没有启用的书源", "warn");
+      return;
+    }
+    const text = JSON.stringify(enabled, null, 2);
+    downloadBlob(text, `${jsonFileName.value || "sources"}-enabled.json`, "application/json");
+    toast(`已导出 ${enabled.length} 个启用书源`, "ok");
+  }
+
+  function downloadXbsEnabled() {
+    const enabled = sources.value.filter((s) => s.enable).map((s) => s._raw);
+    if (enabled.length === 0) {
+      toast("没有启用的书源", "warn");
+      return;
+    }
+    const text = JSON.stringify(enabled);
+    isConverting.value = true;
+    try {
+      const encrypted = json2xbs(text);
+      downloadBlob(
+        encrypted.buffer.slice(0) as ArrayBuffer,
+        `${jsonFileName.value || "sources"}-enabled.xbs`,
+        "application/octet-stream",
+      );
+      toast(`已导出 ${enabled.length} 个启用书源 (XBS)`, "ok");
+    } catch (err) {
+      toast(`加密失败: ${(err as Error).message}`, "err");
+    } finally {
+      isConverting.value = false;
+    }
+  }
+
   // ── Format ─────────────────────────────────────────
   function formatJson() {
     try {
@@ -271,6 +305,8 @@ export const useEditorStore = defineStore("editor", () => {
     convertJson2Xbs,
     downloadXbs,
     downloadJson,
+    downloadXbsEnabled,
+    downloadJsonEnabled,
     formatJson,
     parseSources,
     syncSourcesToJson,
