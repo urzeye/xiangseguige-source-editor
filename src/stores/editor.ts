@@ -290,6 +290,24 @@ export const useEditorStore = defineStore("editor", () => {
     toast(`已创建书源「${data.sourceName}」`, "ok");
   }
 
+  /** Add a source from a raw Record (e.g., AI-generated) */
+  function addSourceRaw(raw: Record<string, unknown>) {
+    const sourceName = String(raw.sourceName ?? "未命名书源");
+    const sourceUrl = String(raw.sourceUrl ?? "");
+    const key = `new-${Date.now()}`;
+    sources.value.unshift({
+      _key: key,
+      sourceName,
+      sourceUrl,
+      enable: raw.enable === 0 ? false : true,
+      weight: Number(raw.weight ?? 0),
+      lastModifyTime: Number(raw.lastModifyTime ?? 0),
+      _raw: raw,
+    });
+    syncSourcesToJson();
+    toast(`已添加书源「${sourceName}」`, "ok");
+  }
+
   return {
     xbsBuffer,
     xbsFileName,
@@ -321,5 +339,6 @@ export const useEditorStore = defineStore("editor", () => {
     setSourceEnabled,
     updateSource,
     addSource,
+    addSourceRaw,
   };
 });

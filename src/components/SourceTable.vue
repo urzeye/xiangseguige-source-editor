@@ -71,6 +71,12 @@
           >
             🔍 有效性检测
           </button>
+          <button
+            class="btn btn-xs btn-primary"
+            @click="aiOpen = true"
+          >
+            🤖 AI 生成书源
+          </button>
         </template>
       </div>
     </div>
@@ -233,6 +239,13 @@
     @close="checkerOpen = false"
   />
 
+  <!-- AI Generator Panel -->
+  <AiGeneratorPanel
+    :open="aiOpen"
+    @close="aiOpen = false"
+    @added="aiOpen = false"
+  />
+
   <!-- Detail Drawer: edit single source JSON -->
   <SourceDrawer
     v-model="detailKey"
@@ -328,10 +341,12 @@ import { ref, computed } from "vue";
 import { useEditorStore } from "@/stores/editor";
 import SourceDrawer from "@/components/SourceDrawer.vue";
 import CheckerPanel from "@/components/CheckerPanel.vue";
+import AiGeneratorPanel from "@/components/AiGeneratorPanel.vue";
 import type { BookSource } from "@/lib/types";
 
 const store = useEditorStore();
 const checkerOpen = ref(false);
+const aiOpen = ref(false);
 
 const search = ref("");
 const sortKey = ref<keyof BookSource>("sourceName");
