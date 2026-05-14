@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { marked } from "marked";
-import mdContent from "../../../香色闺阁书源规则.md?raw";
+import mdContent from "../../香色闺阁书源规则.md?raw";
 
 marked.setOptions({
   gfm: true,
