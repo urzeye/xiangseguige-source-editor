@@ -102,7 +102,7 @@
                 @change="onProxyPresetChange"
               >
                 <option value="dev">本地开发（/api/fetch-page）</option>
-                <option value="public">作者提供的 CF Worker</option>
+                <option value="public">作者的 CF Worker</option>
                 <option value="custom">自定义 Worker URL</option>
               </select>
               <input
@@ -115,6 +115,7 @@
               />
               <div class="proxy-note">
                 GitHub Pages 无后端，需代理抓取 HTML。
+                <br />
                 <a
                   href="cf-worker/fetch-proxy.js"
                   target="_blank"
