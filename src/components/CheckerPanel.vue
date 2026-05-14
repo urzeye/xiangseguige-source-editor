@@ -17,6 +17,15 @@
           </button>
         </div>
 
+        <!-- HTTP sources warning (HTTPS page blocks mixed content) -->
+        <div
+          v-if="httpWarning"
+          class="cp-http-warn"
+        >
+          ⚠ 当前运行在 HTTPS 页面（GitHub Pages），HTTP
+          书源无法被浏览器检测，将自动跳过。在本地运行可检测所有书源。
+        </div>
+
         <!-- Controls -->
         <div class="cp-controls">
           <input
@@ -132,6 +141,12 @@ defineEmits<{ close: [] }>();
 
 const checker = useSourceChecker();
 
+const httpWarning = computed(
+  () =>
+    location.protocol === "https:" &&
+    props.sources.some((s) => s.sourceUrl.startsWith("http:")),
+);
+
 const progress = computed(() => {
   const { done, total } = checker.summary.value;
   return total > 0 ? Math.round((done / total) * 100) : 0;
@@ -195,6 +210,16 @@ function tryStart() {
 }
 .cp-close:hover {
   background: var(--surface2);
+}
+
+.cp-http-warn {
+  padding: 8px 16px;
+  background: #fff8e1;
+  color: #7a5500;
+  border-bottom: 1px solid #ffe082;
+  font-size: 12px;
+  line-height: 1.5;
+  flex-shrink: 0;
 }
 
 .cp-controls {

@@ -58,6 +58,11 @@ async function checkOne(
   const req = buildSearchUrl(source._raw, keyword);
   if (!req) return { status: "skip", detail: "无搜索配置" };
 
+  // Mixed content: HTTPS page cannot fetch HTTP URLs
+  if (location.protocol === "https:" && req.url.startsWith("http:")) {
+    return { status: "skip", detail: "HTTP 源在 HTTPS 页面无法检测" };
+  }
+
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeout * 1000);
   // Chain with outer signal
