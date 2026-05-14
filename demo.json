@@ -1,0 +1,2601 @@
+{
+  "黄易小说网": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.xhytd.com",
+      "content": "//div[@id=\"content\"] ||@js: return result = result.replace(/天才一秒记住.*/,\"\").replace(/http.*/,\"\") .replace(/最新网址.*/,\"\").replace(/章节错误,点此报送.*/,\"\").replace (/报送后维.*/,\"\");",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.xhytd.com",
+      "cover": "//div[@id=\"fmimg\"]/img/@src",
+      "actionID": "bookDetail"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "sourceUrl": "http://www.xhytd.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9910",
+    "sourceName": "黄易小说网",
+    "desc": "🍋-23.10",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "password": "1513",
+    "lastModifyTime": "1700387475.871792",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "validConfig": "",
+      "actionID": "searchBook",
+      "author": "//span[@class=\"s4 wid\"]/a/text()",
+      "requestInfo": "@js:\n\nlet url =config.host+\"/search.html\";\n\nlet hp={'name':params.keyWord};\n\nreturn{'url':url,'POST':false,'httpParams':hp,\"httpHeaders\":config.httpHeaders,forbidCookie:true,cacheTime:3600};",
+      "bookName": "//span[@class=\"s2 wid\"]/a/text()",
+      "detailUrl": "//span[@class=\"s2 wid\"]/a/@href",
+      "host": "http://www.xhytd.com",
+      "list": "//div[@class=\"novelslist2\"]//li",
+      "responseFormatType": "html",
+      "parserID": "DOM"
+    },
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "title": "//a/text()",
+      "host": "http://www.xhytd.com",
+      "list": "//div[@id=\"list\"]/dl/dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "零零小说网": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "https://www.00shu.com",
+      "content": "//div[@id=\"content\"]",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "actionID": "bookDetail",
+      "host": "https://www.00shu.com",
+      "cat": "//meta[@property=\"og:novel:category\"]/@content",
+      "cover": "//meta[@property=\"og:image\"]/@content",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "desc": "//meta[@property=\"og:description\"]/@content"
+    },
+    "bookWorld": {},
+    "shudanList": {},
+    "sourceUrl": "https://www.00shu.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9903",
+    "sourceName": "零零小说网",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1700387176.492243",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "author": "//td[3][@class=\"odd\"]",
+      "responseFormatType": "html",
+      "lastChapterTitle": "//td[2][@class=\"even\"]",
+      "bookName": "//td[1][@class=\"odd\"]",
+      "requestInfo": "https://www.00shu.com/modules/article/search.php?q=%@keyWord&p=%@pageIndex",
+      "host": "https://www.00shu.com",
+      "actionID": "searchBook",
+      "detailUrl": "//td[@class=\"odd\"]/a/@href",
+      "wordCount": "//td[4][@class=\"even\"]",
+      "validConfig": "",
+      "list": "//tr",
+      "parserID": "DOM",
+      "status": "//td[@class=\"odd\"][@align=\"center\"]"
+    },
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "title": "//a",
+      "host": "https://www.00shu.com",
+      "list": "//div[@id=\"list\"]/dl/dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "红袖添香": {
+    "chapterContent": {
+      "validConfig": "",
+      "actionID": "chapterContent",
+      "content": "//div[contains(@class, 'read-content')]/div/p",
+      "requestInfo": "@js:\nreturn {'url':result, 'webView':'', 'webViewSkipUrls':['hm.baidu.com', 'https://www.hongxiu.com/ajax/user/info'], 'forbidCookie':true};",
+      "host": "https://www.hongxiu.com",
+      "responseFormatType": "html",
+      "parserID": "DOM"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM"
+    },
+    "authorId": "",
+    "shudanList": {},
+    "bookWorld": {
+      "榜单": {
+        "cat": "//p[@class='author']/a[2]",
+        "author": "//p[@class='author']/a[1]",
+        "lastChapterTitle": "//p[@class='update']/a",
+        "responseFormatType": "html",
+        "bookName": "//div[2]/h4/a",
+        "desc": "//p[@class='intro']",
+        "requestInfo": "https://www.hongxiu.com/rank/%@filterpageNum=%@pageIndex",
+        "host": "https://www.hongxiu.com",
+        "actionID": "bookWorld",
+        "moreKeys": {
+          "pageSize": "10",
+          "requestFilters": {
+            "风云榜": "hxyuepiao?",
+            "热销榜": "hotsales?period=2&",
+            "礼物榜": "reward?period=2&",
+            "收藏榜": "collect?",
+            "推荐榜": "recom?",
+            "完本榜": "finish?period=2&",
+            "更新榜": "update?period=2&"
+          }
+        },
+        "cover": "//div[1]/a/img/@src",
+        "detailUrl": "//div[2]/h4/a/@href",
+        "parserID": "DOM",
+        "validConfig": "",
+        "list": "//div[@class='book-img-text']//li",
+        "_sIndex": 2,
+        "status": "//p[@class='author']/span[1]"
+      },
+      "女频": {
+        "cat": "//div[2]/p[1]/span[1]",
+        "author": "//div[2]/h4/a",
+        "responseFormatType": "html",
+        "bookName": "//div[2]/h3/a",
+        "desc": "//div[2]/p[2]",
+        "requestInfo": "@js:\nlet fl = params.filters;\nreturn 'https://www.hongxiu.com/category/' + fl.cat + '_f1_' + fl.status + '_' + fl.vip + '_' + fl.wordCount + '_f1_' + fl.sort + '_' + params.pageIndex;",
+        "host": "https://www.hongxiu.com",
+        "actionID": "bookWorld",
+        "moreKeys": {
+          "pageSize": "20",
+          "requestFilters": [
+            {
+              "key": "cat",
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "f1"
+                },
+                {
+                  "title": "现代言情",
+                  "value": "30020"
+                },
+                {
+                  "title": "古代言情",
+                  "value": "30013"
+                },
+                {
+                  "title": "浪漫青春",
+                  "value": "30031"
+                },
+                {
+                  "title": "玄幻言情",
+                  "value": "30001"
+                },
+                {
+                  "title": "仙侠奇缘",
+                  "value": "30008"
+                },
+                {
+                  "title": "科幻空间",
+                  "value": "30042"
+                },
+                {
+                  "title": "游戏竞技",
+                  "value": "30050"
+                },
+                {
+                  "title": "短篇小说",
+                  "value": "30083"
+                },
+                {
+                  "title": "轻小说",
+                  "value": "30055"
+                },
+                {
+                  "title": "悬疑",
+                  "value": "30036"
+                }
+              ]
+            },
+            {
+              "key": "wordCount",
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "f1"
+                },
+                {
+                  "title": "30万以下",
+                  "value": "6"
+                },
+                {
+                  "title": "30~50万",
+                  "value": "2"
+                },
+                {
+                  "title": "50~100万",
+                  "value": "3"
+                },
+                {
+                  "title": "100~200万",
+                  "value": "4"
+                },
+                {
+                  "title": "200万以上",
+                  "value": "5"
+                }
+              ]
+            },
+            {
+              "key": "status",
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "f1"
+                },
+                {
+                  "title": "连载",
+                  "value": "0"
+                },
+                {
+                  "title": "完结",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "key": "vip",
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "f1"
+                },
+                {
+                  "title": "免费",
+                  "value": "1"
+                },
+                {
+                  "title": "Vip",
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "key": "sort",
+              "items": [
+                {
+                  "title": "综合",
+                  "value": "0"
+                },
+                {
+                  "title": "字数",
+                  "value": "9"
+                },
+                {
+                  "title": "时间",
+                  "value": "3"
+                }
+              ]
+            }
+          ]
+        },
+        "detailUrl": "//div[2]/h3/a/@href",
+        "cover": "//div[1]/a/img/@src",
+        "parserID": "DOM",
+        "wordCount": "//div[2]/p[1]/span[3]",
+        "validConfig": "",
+        "list": "//div[@class='right-book-list']//li",
+        "status": "//div[2]/p[1]/span[2]",
+        "_sIndex": 1
+      },
+      "男频": {
+        "cat": "//div[2]/p[1]/span[1]",
+        "author": "//div[2]/h4/a",
+        "responseFormatType": "html",
+        "bookName": "//div[2]/h3/a",
+        "desc": "//div[2]/p[2]",
+        "requestInfo": "@js:\nlet fl = params.filters;\nreturn 'https://www.hongxiu.com/category/' + fl.cat + '_f1_' + fl.status + '_' + fl.vip + '_' + fl.wordCount + '_f1_' + fl.sort + '_' + params.pageIndex;",
+        "host": "https://www.hongxiu.com",
+        "actionID": "bookWorld",
+        "moreKeys": {
+          "pageSize": "20",
+          "requestFilters": [
+            {
+              "key": "cat",
+              "items": [
+                {
+                  "title": "玄幻",
+                  "value": "20001"
+                },
+                {
+                  "title": "奇幻",
+                  "value": "20005"
+                },
+                {
+                  "title": "武侠",
+                  "value": "20010"
+                },
+                {
+                  "title": "仙侠",
+                  "value": "20014"
+                },
+                {
+                  "title": "都市",
+                  "value": "20019"
+                },
+                {
+                  "title": "现实",
+                  "value": "20065"
+                },
+                {
+                  "title": "军事",
+                  "value": "20032"
+                },
+                {
+                  "title": "历史",
+                  "value": "20028"
+                },
+                {
+                  "title": "游戏",
+                  "value": "20050"
+                },
+                {
+                  "title": "体育",
+                  "value": "20054"
+                },
+                {
+                  "title": "科幻",
+                  "value": "20042"
+                },
+                {
+                  "title": "悬疑",
+                  "value": "20037"
+                },
+                {
+                  "title": "短篇",
+                  "value": "20076"
+                },
+                {
+                  "title": "轻小说",
+                  "value": "20059"
+                }
+              ]
+            },
+            {
+              "key": "wordCount",
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "f1"
+                },
+                {
+                  "title": "30万以下",
+                  "value": "6"
+                },
+                {
+                  "title": "30~50万",
+                  "value": "2"
+                },
+                {
+                  "title": "50~100万",
+                  "value": "3"
+                },
+                {
+                  "title": "100~200万",
+                  "value": "4"
+                },
+                {
+                  "title": "200万以上",
+                  "value": "5"
+                }
+              ]
+            },
+            {
+              "key": "status",
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "f1"
+                },
+                {
+                  "title": "连载",
+                  "value": "0"
+                },
+                {
+                  "title": "完结",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "key": "vip",
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "f1"
+                },
+                {
+                  "title": "免费",
+                  "value": "1"
+                },
+                {
+                  "title": "Vip",
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "key": "sort",
+              "items": [
+                {
+                  "title": "综合",
+                  "value": "0"
+                },
+                {
+                  "title": "数字",
+                  "value": "9"
+                },
+                {
+                  "title": "时间",
+                  "value": "3"
+                }
+              ]
+            }
+          ]
+        },
+        "detailUrl": "//div[2]/h3/a/@href",
+        "cover": "//div[1]/a/img/@src",
+        "parserID": "DOM",
+        "wordCount": "//div[2]/p[1]/span[3]",
+        "validConfig": "",
+        "list": "//div[@class='right-book-list']//li",
+        "status": "//div[2]/p[1]/span[2]",
+        "_sIndex": 0
+      }
+    },
+    "sourceUrl": "https://www.hongxiu.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9998",
+    "sourceName": "红袖添香",
+    "desc": "只用于看榜单",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1700387104.029729",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "cat": "//p[@class='author']/a[2]",
+      "author": "//p[@class='author']/a[1]",
+      "lastChapterTitle": "//p[@class='update']/a",
+      "responseFormatType": "html",
+      "bookName": "//div[2]/h4/a",
+      "desc": "//p[@class='intro']",
+      "requestInfo": "https://www.hongxiu.com/search?kw=%@keyWord&pageNum=%@pageIndex",
+      "host": "https://www.hongxiu.com",
+      "actionID": "searchBook",
+      "detailUrl": "//div[2]/h4/a/@href",
+      "cover": "//div[1]/a/img/@src|https:%@result",
+      "validConfig": "",
+      "parserID": "DOM",
+      "moreKeys": {
+        "pageSize": 10
+      },
+      "list": "//*[@id='result-list']/div[1]//li",
+      "status": "//p[@class='author']/span[1]"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "title": "//a",
+      "host": "https://www.hongxiu.com",
+      "list": "//div[@class='volume']//li",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "精华书阁": {
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "validConfig": "",
+      "status": "//div[@class=\"block_txt2\"]/p[5]/text()",
+      "responseFormatType": "html",
+      "host": "https://m.richvv.com",
+      "httpHeaders": {
+        "referer": "https://m.richvv.com",
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1",
+        "cookie": "waf_sc=5889647726;sex=boy"
+      },
+      "cover": "//div[@class=\"block_img2\"]/img/@src",
+      "cat": "//div[@class=\"block_txt2\"]/p[4]/a/text()",
+      "parserID": "DOM",
+      "desc": "//div[@class=\"intro_info\"]/text()"
+    },
+    "weight": "9915",
+    "miniAppVersion": "2.53.2",
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "url": "//a/@href",
+      "title": "//a/text()",
+      "moreKeys": {
+        "maxPage": 500
+      },
+      "host": "https://m.richvv.com",
+      "httpHeaders": {
+        "referer": "https://m.richvv.com",
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1",
+        "cookie": "waf_sc=5889647726;sex=boy"
+      },
+      "list": "//ul[2][@class=\"chapter\"]/li",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "nextPageUrl": "//*[contains(text(),\"下一页\")]/@href"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "enable": 1,
+    "sourceName": "精华书阁",
+    "sourceUrl": "https://m.richvv.com",
+    "httpHeaders": {
+      "referer": "https://m.richvv.com",
+      "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1",
+      "cookie": "waf_sc=5889647726;sex=boy"
+    },
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1700387575.811000",
+    "searchBook": {
+      "cat": "//div[@class=\"cat\"]/text()",
+      "author": "//div [@class=\"author\"]/text()",
+      "responseFormatType": "html",
+      "bookName": "//h4 [@class=\"bookname\"]/a/text()",
+      "httpHeaders": {
+        "referer": "https://m.richvv.com",
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1",
+        "cookie": "waf_sc=5889647726;sex=boy"
+      },
+      "requestInfo": "@js:\nlet url=\"https://m.richvv.com/search.html?ie=utf-8&\";\nlet hp= {'word':params.keyWord};\n\nreturn {'url':url,'httpParams':hp, 'forbidCookie':true, \"cacheTime\":\"3600\"};",
+      "host": "https://m.richvv.com",
+      "actionID": "searchBook",
+      "detailUrl": "//h4 [@class=\"bookname\"]/a/@href",
+      "cover": "//a/img/@src",
+      "validConfig": "",
+      "list": "//div [@class=\"searchbook\"]",
+      "parserID": "DOM"
+    },
+    "chapterContent": {
+      "validConfig": "",
+      "content": "//*[@id=\"nr1\"] | @js:\nreturn result.replace(/精华书阁.*?最新章节！/, '').replace(/为您提供.*?请务必保存好书签.*?com/,\"\").replace(/「/g,\"\").replace(/」/g,\"\").replace(/最快更新请浏览器输入.*精华书阁进行查看/g,\"\") .replace(/为您提供.{1,100}保存好书签！/g, '').replace(/\\(本章未完，点击下一页精彩继续\\)/g,\"\").replace(/」/g,\"\").replace(/『章节有误？登录后点此报错~』/g,\"\").replace(/☆免费小说.{1,20}无弹窗☆/g,\"\").replace(/新?篇? ?第.{1,10}章.{1,50}请收藏！/g,\"\"). replace(/阅读提示：.*/,\"\")",
+      "actionID": "chapterContent",
+      "moreKeys": {
+        "maxPage": 6
+      },
+      "host": "https://m.richvv.com",
+      "httpHeaders": {
+        "referer": "https://m.richvv.com",
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1",
+        "cookie": "waf_sc=5889647726;sex=boy"
+      },
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "nextPageUrl": "//a [text()=\"下一页\"]/@href"
+    },
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "desc": "🍋-23.11",
+    "shudanList": {},
+    "password": "1513",
+    "bookWorld": {},
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    }
+  },
+  "夜书吧": {
+    "chapterContent": {
+      "validConfig": "",
+      "content": "//div[@id='YiJianZhan']/text()",
+      "actionID": "chapterContent",
+      "host": "https://www.lisewu.com",
+      "httpHeaders": {
+        "Referer": "https://www.lisewu.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "parserID": "DOM"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "status": "//div[@class='count']//li[2]/span/text()",
+      "actionID": "bookDetail",
+      "host": "https://www.lisewu.com",
+      "httpHeaders": {
+        "Referer": "https://www.lisewu.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "desc": "//div[@id='bookintro']/p/text()"
+    },
+    "bookWorld": {
+      "书库": {
+        "cat": "//li[2]/text()",
+        "responseFormatType": "html",
+        "lastChapterTitle": "//li[3]/span/a/text()",
+        "author": "//li[4]/a/text()",
+        "bookName": "//li[3]/a/text()",
+        "httpHeaders": {
+          "Referer": "https://www.lisewu.com",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+        },
+        "host": "https://www.lisewu.com",
+        "requestInfo": "@js:\nlet {_class,_status,_count,_update,_sort}=params.filters\nlet url=`${config.host}/shuku/0/${_class}/0/${_count}/${_update}/${_status}/${_sort}/${params.pageIndex}.html`;\n\nreturn {url:url,'httpHeaders':config.httpHeaders}",
+        "actionID": "bookWorld",
+        "detailUrl": "//li[3]/a/@href",
+        "moreKeys": {
+          "pageSize": 50,
+          "requestFilters": "_class\n全部::0\n校园言情::1\n都市言情::2\n古代言情::3\n罗曼史::4\n耽美::5\n百合::6\n同人::7\n奇幻玄幻::8\n网游竞技::9\n科幻异能::10\n恐怖灵异::11\n惊悚推理::12\n武侠仙侠::13\n历史军事::14\n穿越重生::15\n综合其它::16\n\n_status\n不限::0\n新书上传::1\n情节展开::2\n精彩纷呈::3\n接近尾声::4\n已经完本::5\n\n_count\n不限::0\n30万以下::1\n30-50万::2\n50-100万::3\n100-200万::4\n200万以上::5\n\n_update\n不限::0\n三日内::1\n七日内::2\n半月内::3\n一月内::4\n\n_sort\n周点击::weekvisit\n月点击::monthvisit\n总点击::allvisit\n周推荐::weekvote\n月推荐::monthvote\n总推荐::allvote\n字数::words\n收藏数::goodnum\n更新时间::lastupdate\n入库时间::postdate"
+        },
+        "validConfig": "",
+        "parserID": "DOM",
+        "_sIndex": 0,
+        "list": "//div[@class='shulist']/ul",
+        "cover": "//li[3]/a/@href ||@js:\n\nlet match = result.match(/\\/(\\d+)\\.html$/);\n\nif (match) {\n    let number = parseInt(match[1], 10);\n\n    // 计算除以1000后的整数部分\n    let dividedNumber = Math.floor(number / 1000);\n\n    let url = \"https://img.lisewu.com/image/\" + dividedNumber + \"/\" + number + \"/\" + number + \"s.jpg\"\n    return url;\n\n} else {\n    return \"\";\n}",
+        "wordCount": "//li[5]/text()"
+      },
+      "排行榜": {
+        "cat": "//li[2]/text()",
+        "responseFormatType": "html",
+        "author": "//li[4]/text()",
+        "lastChapterTitle": "//li[3]/span/a/text()",
+        "bookName": "//li[3]/a/text()",
+        "httpHeaders": {
+          "Referer": "https://www.lisewu.com",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+        },
+        "requestInfo": "@js:\nlet {_type}=params.filters\nlet url=`${config.host}${_type}`;\n\nreturn {url:url,'httpHeaders':config.httpHeaders}",
+        "host": "https://www.lisewu.com",
+        "actionID": "bookWorld",
+        "moreKeys": {
+          "pageSize": 50,
+          "requestFilters": "_type\n总点击榜::/top/allvisit.html\n月点击榜::/top/monthvisit.html\n总推荐榜::/top/allvote.html\n月推荐榜::/top/monthvote.html\n最近更新::/top/lastupdate.html\n最新入库::/top/postdate.html\n最新上架::/top/signtime.html\n收藏榜::/top/goodnum.html\n字数榜::/top/words.html\n新书榜::/top/newhot.html"
+        },
+        "detailUrl": "//li[3]/a/@href",
+        "validConfig": "",
+        "list": "//div[@class='rec_rullist']/ul",
+        "_sIndex": 1,
+        "parserID": "DOM",
+        "cover": "//li[3]/a/@href ||@js:\n\nlet match = result.match(/\\/(\\d+)\\.html$/);\n\nif (match) {\n    let number = parseInt(match[1], 10);\n\n    // 计算除以1000后的整数部分\n    let dividedNumber = Math.floor(number / 1000);\n\n    let url = \"https://img.lisewu.com/image/\" + dividedNumber + \"/\" + number + \"/\" + number + \"s.jpg\"\n    return url;\n\n} else {\n    return \"\";\n}",
+        "status": "//li[5]/text()"
+      }
+    },
+    "shudanList": {},
+    "sourceUrl": "https://www.lisewu.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9900",
+    "sourceName": "夜书吧",
+    "httpHeaders": {
+      "Referer": "https://www.lisewu.com",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+    },
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "desc": "PO18",
+    "lastModifyTime": "1721573398.290205",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "validConfig": "",
+      "actionID": "searchBook",
+      "JSParser": "function functionName(config, params, result) {\n\n    result = result. replace(/<meta[^>]*charset[^>]*>/gi, \"\");\n\n    let list = []\n    let xml = params.nativeTool.XPathParserWithSource(result)\n\n    if (/search/.test(params.responseUrl)) {    //搜索页\n        let items = xml.queryWithXPath(`//div[@id='sitembox']/dl`)\n      \n        for (i in items) {\n\n        // params.nativeTool.log()\n            let obj = {\n                \n                \"bookName\": items[i].queryWithXPath(`//dd/h3/a/text()`)[0].content(),\n                \"detailUrl\": items[i].queryWithXPath(`//dd/h3/a/@href`)[0].content(),\n                \"author\": items[i].queryWithXPath(`//dd[2]/span[1]/text()`)[0].content(),\n                \"desc\": items[i].queryWithXPath(`//dd[3]/text()`)[0].content(),\n                \"cover\": items[i].queryWithXPath(`//dt//img/@src`)[0].content(),\n                \"cat\": items[i].queryWithXPath(`//dd[2]/span[3]/text()`)[0].content(),\n                \"status\": items[i].queryWithXPath(`//dd[2]/span[2]/text()`)[0].content(),\n                \"wordCount\": items[i].queryWithXPath(`//dd[2]/span[4]/text()`)[0].content(),\n                \"lastChapterTitle\": items[i].queryWithXPath(`//dd[4]/a/text()`)[0].content()\n            }\n\n\n            list.push(obj)\n        }\n    } else {    //详情页\n        // params.nativeTool.log()\n\n        let detailObj = {\n            \"bookName\": xml.queryWithXPath(`//div[@id='bookinfo']/div[2]/div[1]/h1/text()`)[0].content(),\n            \"author\": xml.queryWithXPath(`//div[@id='bookinfo']/div[2]/div[1]//a/text()`)[0].content(),\n            \"cat\": xml.queryWithXPath(`//div[@id='bookinfo']/div[2]/div[2]//li[1]/span/text()`)[0].content(),\n            \"detailUrl\": params.responseUrl,\n            \"desc\": xml.queryWithXPath(`//div[@id='bookinfo']/div[2]/div[3]/p/text()`)[0].content(),\n            \"cover\": xml.queryWithXPath(`//div[@id='bookinfo']//img/@src`)[0].content(),\n            \"lastChapterTitle\": xml.queryWithXPath(`//div[@id='newlist']//li[1]/a/text()`)[0].content(),\n            \"status\": xml.queryWithXPath(`//div[@id='bookinfo']/div[2]/div[2]//li[2]/span/text()`)[0].content(),\n            \"wordCount\": xml.queryWithXPath(`//div[@id='bookinfo']/div[2]/div[2]//li[4]/span/text()`)[0].content(),\n            \n        }\n\n        list.push(detailObj)\n    }\n    \n    return {\n        \"list\": list\n    }\n}",
+      "requestInfo": "@js:\nlet hp = {};\nhp.searchkey = params.keyWord;\nhp.searchtype = \"all\";\nhp.page = params.pageIndex;\nlet url =\"https://www.lisewu.com/modules/article/search.php\"\n\nreturn {'url':url,\n    'httpParams':hp, \n    'httpHeaders':config.httpHeaders,\n    \"POST\": true,\n};",
+      "moreKeys": {
+        "maxPage": 10
+      },
+      "host": "https://www.lisewu.com",
+      "httpHeaders": {
+        "Referer": "https://www.lisewu.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "parserID": "DOM"
+    },
+    "chapterList": {
+      "nextPageUrl": "//a[@class='pg-next']/@href",
+      "responseFormatType": "html",
+      "url": "//a/@href",
+      "httpHeaders": {
+        "Referer": "https://www.lisewu.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "requestInfo": "@js:\n\nif (result.includes(\"asc\")) {\n    return {'url':result};\n}\nlet url = result.replace(/www/, \"m\").replace(\"/book/\", \"/index/\").replace(\".html\", \"/asc/1.html\");\nreturn {'url':url};",
+      "title": "//a/text()",
+      "actionID": "chapterList",
+      "moreKeys": {
+        "maxPage": 999
+      },
+      "host": "https://www.lisewu.com",
+      "validConfig": "",
+      "list": "//div[@id='readerlist']/ul/li",
+      "parserID": "DOM"
+    }
+  },
+  "77读书": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.77shuku.la",
+      "content": "//div[@class=\"page-content\"]|| @js:\nreturn result.replace(/最新网址：.*/,\"\").replace(/txt下载地址：.*/,\"\").replace(/手机阅读：.*/,\"\")",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "actionID": "bookDetail",
+      "host": "http://www.77shuku.la",
+      "cover": "//div[@class=\"img_in\"]/img/@src",
+      "responseFormatType": "html",
+      "desc": "//div[@id=\"intro\"]",
+      "parserID": "DOM"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "sourceUrl": "http://www.77shuku.la",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9915",
+    "sourceName": "77读书",
+    "desc": "🍋-23.11",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "password": "1513",
+    "lastModifyTime": "1700387585.410000",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "validConfig": "",
+      "actionID": "searchBook",
+      "author": "//td[6]/span",
+      "requestInfo": "@js:\n\nlet url =config.host+\"/modules/article/search.php\";\n\nlet hp={'searchkey':params.keyWord};\n\nreturn{'url':url,'GET':false,'httpParams':hp,\"httpHeaders\":config.httpHeaders,forbidCookie:true,cacheTime:3600};",
+      "bookName": "//td[3]/a",
+      "detailUrl": "//td[3]//a/@href",
+      "host": "http://www.77shuku.la",
+      "list": "//div[@class=\"BOX\"]//tr",
+      "responseFormatType": "html",
+      "parserID": "DOM"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "title": "//a",
+      "host": "http://www.77shuku.la",
+      "list": "//div[@class=\"zjbox\"]//dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "番茄小说网": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "https://www.fanqianxs.com",
+      "content": "//div[@id=\"htmlContent\"]",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "actionID": "bookDetail",
+      "host": "https://www.fanqianxs.com",
+      "cover": "//div[@class=\"pic\"]/img/@src",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "desc": "//div[@class=\"intro\"]/p/text()"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "sourceUrl": "https://www.fanqianxs.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9909",
+    "sourceName": "番茄小说网",
+    "desc": "🍋-23.10",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "password": "1513",
+    "lastModifyTime": "1700387457.219976",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "validConfig": "",
+      "actionID": "searchBook",
+      "author": "//span[4]/text()",
+      "requestInfo": "@js:\n\nlet url =config.host+\"/user/search.html\";\n\nlet hp={'q':params.keyWord};\n\nreturn{'url':url,'GET':false,'httpParams':hp,\"httpHeaders\":config.httpHeaders,forbidCookie:true,'webView':true,'webViewJsDelay':4};",
+      "bookName": "//@title",
+      "detailUrl": "//span[@class=\"s2\"]/a/@href",
+      "host": "https://www.fanqianxs.com",
+      "list": "//div[@id=\"book-list\"]//li",
+      "responseFormatType": "html",
+      "parserID": "DOM"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "title": "//a/text()",
+      "host": "https://www.fanqianxs.com",
+      "list": "//div[@id=\"list\"]/dl/dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//dd/a/@href"
+    }
+  },
+  "必去楼": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.bequ6.org",
+      "content": "//div[@id=\"content\"] || @js:\nreturn result.replace(/最新网址：.*/,\"\")",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "actionID": "bookDetail",
+      "host": "http://www.bequ6.org",
+      "cover": "//div[@id=\"fmimg\"]/img/@src",
+      "responseFormatType": "html",
+      "desc": "//div[@id=\"intro\"]",
+      "parserID": "DOM"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "sourceUrl": "http://www.bequ6.org",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9914",
+    "sourceName": "必去楼",
+    "desc": "🍋-23.11",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "password": "1513",
+    "lastModifyTime": "1700387592.258000",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "validConfig": "",
+      "actionID": "searchBook",
+      "author": "//td[3]",
+      "requestInfo": "@js:\n\nlet url =config.host+\"/search\";\n\nlet hp={'searchkey':params.keyWord,'searchtype:':'articlename'};\n\nreturn{'url':url,'POST':true,'httpParams':hp,\"httpHeaders\":config.httpHeaders,forbidCookie:true,cacheTime:3600};",
+      "bookName": "//td[2]/a",
+      "detailUrl": "//td[2]/a/@href",
+      "host": "http://www.bequ6.org",
+      "list": "//div[@id=\"content\"]//tr",
+      "responseFormatType": "html",
+      "parserID": "DOM"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "title": "//a",
+      "host": "http://www.bequ6.org",
+      "list": "//div[@id=\"list\"]//dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "⛄言情小说阁": {
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "weight": "9999",
+    "miniAppVersion": "2.53.2",
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "title": "//a",
+      "host": "http://www.xianqihaotianmi.org",
+      "list": "//div[@class='panel-body']//ul[contains(@class,'list-charts')]//li",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a//@href"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "enable": 1,
+    "sourceName": "⛄言情小说阁",
+    "sourceType": "text",
+    "sourceUrl": "http://www.xianqihaotianmi.org",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1729523993.628878",
+    "toTop": "1767023003.617388",
+    "searchBook": {
+      "author": "//td[3]",
+      "responseFormatType": "html",
+      "bookName": "//td[2]//a",
+      "requestInfo": "@js:\nlet obj = {\n    'url':'/modules/article/search.php', \n    'POST':true, \n    'httpParams':{'searchkey': params.keyWord}, \n    'httpHeaders':{'UserAgent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'},\n    }\n\nreturn obj;",
+      "host": "http://www.xianqihaotianmi.org",
+      "actionID": "searchBook",
+      "detailUrl": "//td[2]//a/@href",
+      "cover": "//td[2]//a/@href ||@js:\nlet id = result.match(/(\\d+)/)[0]\nreturn `${config.host}/files/article/image/${parseInt(id/1000)}/${id}/${id}s.jpg`",
+      "validConfig": "",
+      "parserID": "DOM",
+      "list": "//table[@id=\"bookcon\"]//tr[position()>1]",
+      "status": "//td[last()]"
+    },
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "content": "//div[contains(@class,\"content-body\")]/text() ||@js:\nreturn result.replace(/[\\s]{2,}/gi, '\\n');",
+      "host": "http://www.xianqihaotianmi.org",
+      "parserID": "DOM",
+      "actionID": "chapterContent"
+    },
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "password": "awesomestack⛄️",
+    "shudanList": {},
+    "authorId": "",
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "validConfig": "",
+      "status": "//div[contains(@class,\"info3\")]//p[1] ||@js:\nreturn result.split('：').pop()",
+      "lastChapterTitle": "//div[contains(@class,'info3')]//p[3]//a",
+      "host": "http://www.xianqihaotianmi.org",
+      "cover": "//div[@class=\"info1\"]/img/@src",
+      "responseFormatType": "html",
+      "desc": "//div[@class=\"info2\"]//p",
+      "parserID": "DOM"
+    },
+    "bookWorld": {
+      "分类": {
+        "author": "//div[@class=\"book_author\"]//a",
+        "responseFormatType": "html",
+        "bookName": "//h4//a",
+        "desc": "//p[@class=\"book-intro-index\"]/text()",
+        "requestInfo": "/list/%@filter-%@pageIndex.html",
+        "host": "http://www.xianqihaotianmi.org",
+        "actionID": "bookWorld",
+        "moreKeys": {
+          "pageSize": 30,
+          "requestFilters": "玄幻::1\n仙侠::2\n言情::3\n历史::4\n网游::5\n科幻::6\n恐怖::7\n其他::8"
+        },
+        "cover": "//img/@src",
+        "detailUrl": "//h4//a/@href",
+        "parserID": "DOM",
+        "_sIndex": 0,
+        "list": "//div[@class=\"col-md-8\"]//div[@class=\"media\"]",
+        "validConfig": ""
+      }
+    }
+  },
+  "ᦗ天域小说": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.tycqzw.net",
+      "content": "//*[@id=\"content\"]",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "actionID": "bookDetail",
+      "status": "//div[@id=\"info\"]/p[3]|@replace:最后更新：",
+      "lastChapterTitle": "//*[@property=\"og:novel:latest_chapter_name\"]/@content",
+      "host": "http://www.tycqzw.net",
+      "cover": "//div[@id=\"fmimg\"]/img/@src",
+      "responseFormatType": "html",
+      "desc": "//div[@id=\"intro\"]|@js:return result.replace(/\\\\n/g,'\\n')",
+      "parserID": "DOM"
+    },
+    "shudanList": {},
+    "bookWorld": {
+      "分类": {
+        "author": "//p[@class=\"author\"]|@js:return result.replace(/作者(：|:)/,'').trim()",
+        "responseFormatType": "html",
+        "bookName": "//p[@class=\"title\"]",
+        "requestInfo": "@js:\nlet {_type}=params.filters\nlet url=`http://wap.tycqzw.net/xclass/${_type}/${params.pageIndex}.html`;\n\nreturn {url:url,'httpHeaders':config.httpHeaders}",
+        "host": "http://www.tycqzw.net",
+        "actionID": "bookWorld",
+        "moreKeys": {
+          "pageSize": 10,
+          "requestFilters": "_type\n全部::0\n玄幻小说::1\n修真小说::2\n都市小说::3\n穿越小说::4\n网游小说::5\n科幻小说::6\n其他小说::7"
+        },
+        "cover": "//@data-original",
+        "validConfig": "",
+        "list": "//*[@id=\"main\"]/div",
+        "_sIndex": 0,
+        "parserID": "DOM",
+        "detailUrl": "//a/@href"
+      }
+    },
+    "sourceUrl": "http://www.tycqzw.net",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "999",
+    "sourceName": "ᦗ天域小说",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1721497864.839039",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "author": "//td[3]",
+      "actionID": "searchBook",
+      "validConfig": "",
+      "requestInfo": "@js:\nreturn {\n             'url':config.host+'/search.php',\n             'httpParams':{\n                    'searchkey':params.keyWord\n                    },\n             'httpHeaders': config.httpHeaders \n}",
+      "bookName": "//td[1]/a",
+      "detailUrl": "//td[1]/a/@href",
+      "host": "http://www.tycqzw.net",
+      "list": "//table/tr[not(contains(@align,\"center\"))]",
+      "responseFormatType": "html",
+      "parserID": "DOM"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "title": "//a",
+      "host": "http://www.tycqzw.net",
+      "list": "//dt[contains(.,'正文')]/following-sibling::dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "4020电子书": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.wsskw.com",
+      "content": "//div[@id='content']/text()",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "parserID": "DOM",
+      "actionID": "bookDetail",
+      "responseFormatType": "html"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "sourceUrl": "http://www.wsskw.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9904",
+    "sourceName": "4020电子书",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1700387184.714467",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "actionID": "searchBook",
+      "validConfig": "",
+      "author": "//td[4]",
+      "requestInfo": "http://www.wsskw.com/so.html?q=%@keyWord",
+      "detailUrl": "//td[2]/a/@href",
+      "bookName": "//td[2]/a",
+      "host": "http://www.wsskw.com",
+      "lastChapterTitle": "//td[3]/a",
+      "list": "//*[@class='grid']//tr || //*[@class='listBox']//li",
+      "responseFormatType": "html",
+      "parserID": "DOM"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "title": "//a",
+      "moreKeys": {
+        "skipCount": 12
+      },
+      "host": "http://www.wsskw.com",
+      "list": "//li[@class='chapter-item']",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href || @js:\nreturn params.responseUrl + result;"
+    }
+  },
+  "二三中文": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.23uswx.org",
+      "content": "//div[@id=\"content\"] || @js:\nreturn result.replace(/最新网址：.*/,\"\")",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "actionID": "bookDetail",
+      "host": "http://www.23uswx.org",
+      "cover": "//div[@id=\"fmimg\"]/img/@src",
+      "responseFormatType": "html",
+      "desc": "//div[@id=\"intro\"]",
+      "parserID": "DOM"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "sourceUrl": "http://www.23uswx.org",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9913",
+    "sourceName": "二三中文",
+    "desc": "🍋-23.11",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "password": "1513",
+    "lastModifyTime": "1700387598.242000",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "author": "//td[3]",
+      "responseFormatType": "html",
+      "bookName": "//td[1]/a",
+      "requestInfo": "@js:\n\nlet url =config.host+\"/modules/article/search.php\";\n\nlet hp={'q':params.keyWord};\n\nreturn{'url':url,'GET':false,'httpParams':hp,\"httpHeaders\":config.httpHeaders,forbidCookie:true,cacheTime:3600};",
+      "host": "http://www.23uswx.org",
+      "actionID": "searchBook",
+      "detailUrl": "//td[1]/a/@href",
+      "wordCount": "//td[4]",
+      "validConfig": "",
+      "list": "//tr[@id=\"nr\"]",
+      "parserID": "DOM",
+      "status": "//td[6]"
+    },
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "title": "//a",
+      "host": "http://www.23uswx.org",
+      "list": "//div[@id=\"list\"]//dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "小说吧": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "content": "//div[@id=\"acontent\"]/text()|@js:\nvar ind1= result.indexOf('(小说吧 www.xiaoshuoba.com)');\nif(ind1>0){\n    result=result.substring(ind1+48,result.length);\n}\n\nvar ind2= result.lastIndexOf('小说吧 www.xiaoshuoba.com');\nif(ind2>0){\n    result=result.substring(0,ind2);\n}\n//var rr=r.substring(0,r.indexOf('章节错误,'));\nreturn result;",
+      "host": "http://www.xiaoshuoba.com/",
+      "parserID": "DOM",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "authorId": "",
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM"
+    },
+    "bookWorld": {},
+    "shudanList": {},
+    "sourceUrl": "http://www.xiaoshuoba.com/",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9900",
+    "sourceName": "小说吧",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1700387150.827334",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "cat": "//div[@class=\"c_tag\"][1]/span[4]",
+      "author": "//div[@class=\"c_tag\"][1]/span[2]",
+      "lastChapterTitle": "//div[@class=\"c_tag\"][2]//a",
+      "responseFormatType": "html",
+      "bookName": "//span[@class=\"c_subject\"]/a",
+      "requestInfo": "modules/article/search.php?q=%@keyWord",
+      "host": "http://www.xiaoshuoba.com/",
+      "actionID": "searchBook",
+      "detailUrl": "//div[2]/div/a/@href",
+      "cover": "//div[@class=\"fl\"]/a/img/@src",
+      "validConfig": "",
+      "parserID": "DOM",
+      "wordCount": "//div[@class=\"c_tag\"][1]/span[6]",
+      "list": "//div[@class=\"c_row\"]",
+      "status": "//div[@class=\"c_tag\"][1]/span[8]"
+    },
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "updateTime": "//h1/span[2]|@replace:更新时间：",
+      "title": "//a",
+      "host": "http://www.xiaoshuoba.com/",
+      "list": "//ul[@class=\"chapters\"]/li",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "爱下书小说网": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.aixiashu.info",
+      "content": "//div[@id=\"content\"]",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.aixiashu.info",
+      "cover": "//div[@id=\"fmimg\"]/img/@src",
+      "actionID": "bookDetail"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "sourceUrl": "http://www.aixiashu.info",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9912",
+    "sourceName": "爱下书小说网",
+    "desc": "🍋-23.11",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "password": "1513",
+    "lastModifyTime": "1700387610.930000",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "author": "//td[3]",
+      "responseFormatType": "html",
+      "bookName": "//td[1]/a",
+      "requestInfo": "@js:\n\nlet url =config.host+\"/modules/article/search.php\";\n\nlet hp={'searchkey':params.keyWord,'searchtype:':'articlename'};\n\nreturn{'url':url,'POST':true,'httpParams':hp,\"httpHeaders\":config.httpHeaders,forbidCookie:true,cacheTime:3600};",
+      "host": "http://www.aixiashu.info",
+      "actionID": "searchBook",
+      "detailUrl": "//td[1]/a/@href",
+      "wordCount": "//td[4]",
+      "validConfig": "",
+      "list": "//div[@id=\"content\"]//tr",
+      "parserID": "DOM",
+      "status": "//td[6]"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "title": "//a",
+      "host": "http://www.aixiashu.info",
+      "list": "//div[@id=\"list\"]//dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "八一中文网": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "content": "//div[@id=\"content\"]|@js:return result.replace('7017k','')",
+      "host": "http://www.zwduxs.com",
+      "parserID": "DOM",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "authorId": "",
+    "bookDetail": {
+      "parserID": "DOM",
+      "actionID": "bookDetail",
+      "responseFormatType": "html"
+    },
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookWorld": {},
+    "shudanList": {},
+    "sourceUrl": "http://www.zwduxs.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9906",
+    "sourceName": "八一中文网",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1700387201.773521",
+    "parserID": "DOM",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "responseFormatType": "html",
+      "author": "//td[3]",
+      "bookName": "//td[1]/a",
+      "requestInfo": "http://www.zwduxs.com/modules/article/search.php?searchtype=all&searchkey=%@keyWord",
+      "host": "http://www.zwduxs.com",
+      "actionID": "searchBook",
+      "detailUrl": "//td[1]/a/@href",
+      "validConfig": "",
+      "parserID": "DOM",
+      "list": "//tr[@id=\"nr\"]",
+      "status": "//td[6]",
+      "updateTime": "//td[5]"
+    },
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "updateTime": "//meta[@property=\"og:novel:update_time\"]/@content",
+      "requestInfo": "@js:\nreturn params.queryInfo.detailUrl;",
+      "title": "//a",
+      "host": "http://www.zwduxs.com",
+      "list": "//div[@id=\"list\"]/dl/dd",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href|http://www.zwduxs.com%@result"
+    }
+  },
+  "番茄小说官方api": {
+    "chapterContent": {
+      "validConfig": "",
+      "content": "$.data.content || @js:return result.replaceAll(\"</p><p>\",\"\\n\").replace(\"<header><div class=\\\"tt-title\\\">\",\"\\n\").replace(\"</div></header><article><p>\",\"\\n\").replace(\"</p></article><footer></footer>\",\"\").replace(/第.*章.*/,\"\")",
+      "actionID": "chapterContent",
+      "requestInfo": "https://novel.snssdk.com/api/novel/book/reader/full/v1/?aid=2329&item_id=%@result",
+      "host": "https://api5-normal-sinfonlineb.fqnovel.com",
+      "responseFormatType": "json",
+      "parserID": "DOM"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM"
+    },
+    "shudanList": {},
+    "bookWorld": {
+      "男生": {
+        "cat": "$.tags",
+        "author": "$.author",
+        "lastChapterTitle": "$.lastChapterTitlde",
+        "responseFormatType": "json",
+        "bookName": "$.book_name",
+        "desc": "$.abstract",
+        "requestInfo": "@js:\nlet {_id}=params.filters\nlet url=`https://novel.snssdk.com/api/novel/channel/homepage/new_category/book_list/v1/?app_version=4.6.0&device_platform=android&aid=1319&app_name=super&parent_enterfrom=novel_channel_category.tab.&channel=ppx_wy_and_gaox_d_5&version_code=460&version_name=4.6.0&word_count=9&genre_type=0&creation_status=9&offset=${((params.pageIndex-1)*100)}&limit=100&gender=1&category_id=${_id}`;\n\nreturn {url:url,'httpHeaders':config.httpHeaders}",
+        "host": "https://api5-normal-sinfonlineb.fqnovel.com",
+        "actionID": "bookWorld",
+        "detailUrl": "$.book_id",
+        "cover": "$.thumb_url",
+        "validConfig": "",
+        "list": "$.data.data.*",
+        "_sIndex": 1,
+        "parserID": "DOM",
+        "moreKeys": {
+          "maxPage": 100,
+          "requestFilters": "_id\n都市::1\n生活::2\n玄幻::7\n科幻::8\n悬疑::10\n乡村::11\n历史::12\n军事::13\n体育::15\n武侠::16\n文学::47\n动漫::57\n赘婿::25\n神医::26\n战神::27\n奶爸::42\n学霸::82\n天才::90\n腹黑::92\n扮猪::93\n鉴宝::17\n系统::19\n神豪::20\n种田::23\n重生::36\n穿越::37\n次元::39\n海岛::40\n娱乐::43\n空间::44\n推理::61\n洪荒::66\n三国::67\n末世::68\n直播::69\n无限::70\n诸天::71\n大唐::73\n宠物::74\n外卖::75\n星际::77\n美食::78\n年代::79\n剑道::80\n盗墓::81\n灵异::100\n"
+        },
+        "wordCount": "$.word_number"
+      },
+      "女频": {
+        "cat": "$.tags",
+        "author": "$.author",
+        "lastChapterTitle": "$.lastChapterTitlde",
+        "responseFormatType": "json",
+        "bookName": "$.book_name",
+        "desc": "$.abstract",
+        "requestInfo": "@js:\nlet {_id}=params.filters\nlet url=`https://novel.snssdk.com/api/novel/channel/homepage/new_category/book_list/v1/?app_version=4.6.0&device_platform=android&aid=1319&app_name=super&parent_enterfrom=novel_channel_category.tab.&channel=ppx_wy_and_gaox_d_5&version_code=460&version_name=4.6.0&word_count=9&genre_type=0&creation_status=9&offset=((${params.pageIndex}-1)*100)&limit=100&gender=1&category_id=${_id}`;\n\nreturn {url:url,'httpHeaders':config.httpHeaders}",
+        "host": "https://api5-normal-sinfonlineb.fqnovel.com",
+        "actionID": "bookWorld",
+        "detailUrl": "$.book_id",
+        "cover": "$.thumb_url",
+        "validConfig": "",
+        "list": "$.data.data.*",
+        "_sIndex": 2,
+        "parserID": "DOM",
+        "moreKeys": {
+          "maxPage": 100,
+          "requestFilters": "_id\n生活::2\n现言::3\n古言::5\n科幻::8\n悬疑::10\n乡村::11\n历史::12\n军事::13\n武侠::16\n文学::47\n动漫::57\n萌宝::28\n总裁::29\n宠妻::30\n学霸::82\n公主::83\n王妃::85\n女强::86\n皇叔::87\n嫡女::88\n精灵::89\n天才::90\n腹黑::92\n扮猪::93\n团宠::94\n校园::4\n系统::19\n种田::23\n快穿::24\n重生::36\n穿越::37\n次元::39\n娱乐::43\n空间::44\n推理::61\n末世::68\n直播::69\n兽世::72\n清穿::76\n星际::77\n美食::78\n年代::79\n盗墓::81\n虐文::95\n甜宠::96\n灵异::100\n 玄幻言情::32\n 宫斗宅斗::246\n 神医::26\n 洪荒::66\n 三国::67\n"
+        },
+        "wordCount": "$.word_number"
+      }
+    },
+    "sourceUrl": "https://api5-normal-sinfonlineb.fqnovel.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9906",
+    "sourceName": "番茄小说官方api",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "password": "147258369",
+    "lastModifyTime": "1701768823.312317",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "cat": "$.tags",
+      "author": "$.author",
+      "lastChapterTitle": "$.lastChapterTitlde",
+      "responseFormatType": "json",
+      "bookName": "$.book_name",
+      "desc": "$.abstract",
+      "requestInfo": "@js:\nlet KEY=encodeURI(params.keyWord)\nlet url=`https://api5-normal-sinfonlineb.fqnovel.com/reading/bookapi/search/page/v/?query=${KEY}&aid=1967&channel=0&os_version=0&device_type=0&device_platform=0&iid=466614321180296&passback=${((params.pageIndex-1)*10)}&version_code=999`;\nreturn {url:url}",
+      "host": "https://api5-normal-sinfonlineb.fqnovel.com",
+      "actionID": "searchBook",
+      "detailUrl": "$.book_id",
+      "cover": "$.thumb_url",
+      "validConfig": "",
+      "list": "$..book_data[0]",
+      "parserID": "DOM",
+      "moreKeys": {
+        "maxPage": 10
+      }
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "requestInfo": "https://fanqienovel.com/api/reader/directory/detail?bookId=%@result",
+      "title": "$.title",
+      "host": "https://api5-normal-sinfonlineb.fqnovel.com",
+      "list": "$..chapterListWithVolume[*].*",
+      "responseFormatType": "json",
+      "parserID": "DOM",
+      "url": "$.itemId"
+    }
+  },
+  "顶点小说网": {
+    "chapterContent": {
+      "actionID": "chapterContent",
+      "content": "//div[@id='booktxt']/p/text()",
+      "validConfig": "",
+      "moreKeys": {
+        "maxPage": 10
+      },
+      "host": "http://www.idingdian.com",
+      "httpHeaders": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Cache-Control": "max-age=0",
+        "Connection": "keep-alive",
+        "Referer": "http://www.idingdian.com/search/?searchkey=%E8%8A%B1%E5%AB%81",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        "Accept-Language": "zh-CN,zh;q=0.9"
+      },
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "nextPageUrl": "//a[@id='next_url' and text()='下一页']/@href"
+    },
+    "enable": "1",
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "status": "//div[@id='info']/p[2]/text()||@js:\nreturn result.replace(\"状态：\",\"\")",
+      "validConfig": "",
+      "actionID": "bookDetail",
+      "lastChapterTitle": "//div[@id='info']/p[3]/a/text() ||@js:\nreturn result.replace(/.*(?=第)/, \"\");",
+      "host": "http://www.idingdian.com",
+      "httpHeaders": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Cache-Control": "max-age=0",
+        "Connection": "keep-alive",
+        "Referer": "http://www.idingdian.com/search/?searchkey=%E8%8A%B1%E5%AB%81",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        "Accept-Language": "zh-CN,zh;q=0.9"
+      },
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "desc": "//div[@id='intro']/text()"
+    },
+    "shudanList": {},
+    "bookWorld": {
+      "分类": {
+        "cat": "//span[1]/text()",
+        "responseFormatType": "html",
+        "lastChapterTitle": "//span[3]/a/text()",
+        "author": "//span[4]/text()",
+        "bookName": "//span[2]/a/text()",
+        "httpHeaders": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Cache-Control": "max-age=0",
+          "Connection": "keep-alive",
+          "Referer": "http://www.idingdian.com/search/?searchkey=%E8%8A%B1%E5%AB%81",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+          "Accept-Language": "zh-CN,zh;q=0.9"
+        },
+        "requestInfo": "@js:\nlet {_type}=params.filters\nlet url=`http://www.idingdian.com${_type}${params.pageIndex}.html`;\nreturn {url:url,'httpHeaders':config.httpHeaders}",
+        "host": "http://www.idingdian.com",
+        "actionID": "bookWorld",
+        "detailUrl": "//span[2]/a/@href",
+        "moreKeys": {
+          "pageSize": 19,
+          "requestFilters": "_type\n玄幻::/class/1_\n武侠::/class/2_\n都市::/class/3_\n历史::/class/4_\n侦探::/class/5_\n游戏::/class/6_\n科幻::/class/7_\n恐怖::/class/8_\n女频::/class/9_\n其他::/class/10_\n热门::/rank/allvisit/"
+        },
+        "validConfig": "",
+        "list": "//div[@class='l']/ul/li",
+        "_sIndex": 0,
+        "parserID": "DOM",
+        "cover": "//span[2]/a/@href || @js:\n\nlet match = result.match(/\\/(\\d+)\\/$/);\n\nif (match) {\n    let number = parseInt(match[1], 10);\n\nparams.nativeTool.log(number)\n\n    // 计算除以1000后的整数部分\n    let dividedNumber = Math.floor(number / 1000);\n    \n    let url = `http://img.idingdian.com/image/${dividedNumber}/${number - 18}/${number - 18}s.jpg`\n    params.nativeTool.log(url)\n    return url;\n\n} else {\n    return \"\";\n}"
+      }
+    },
+    "sourceUrl": "http://www.idingdian.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9901",
+    "sourceName": "顶点小说网",
+    "httpHeaders": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Cache-Control": "max-age=0",
+      "Connection": "keep-alive",
+      "Referer": "http://www.idingdian.com/search/?searchkey=%E8%8A%B1%E5%AB%81",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept-Language": "zh-CN,zh;q=0.9"
+    },
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1721573388.866490",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "author": "//div/a/text()",
+      "responseFormatType": "html",
+      "bookName": "//dt/a/text()",
+      "httpHeaders": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Cache-Control": "max-age=0",
+        "Connection": "keep-alive",
+        "Referer": "http://www.idingdian.com/search/?searchkey=%E8%8A%B1%E5%AB%81",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        "Accept-Language": "zh-CN,zh;q=0.9"
+      },
+      "requestInfo": "@js:\nlet hp = {};\nhp.searchkey = params.keyWord;\nlet url = `${config.host}/search`;\nreturn {'url':url, 'httpParams':hp, 'httpHeaders':config.httpHeaders};",
+      "host": "http://www.idingdian.com",
+      "actionID": "searchBook",
+      "detailUrl": "//dt/a/@href",
+      "desc": "//dd/text()",
+      "validConfig": "",
+      "list": "//div[@id='hotcontent']/div/div",
+      "parserID": "DOM",
+      "cover": "//div[1]/a/img/@src",
+      "wordCount": "//div[1]/em[1]/text()"
+    },
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "title": "//dd/text()",
+      "host": "http://www.idingdian.com",
+      "httpHeaders": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Cache-Control": "max-age=0",
+        "Connection": "keep-alive",
+        "Referer": "http://www.idingdian.com/search/?searchkey=%E8%8A%B1%E5%AB%81",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        "Accept-Language": "zh-CN,zh;q=0.9"
+      },
+      "list": "//div[@id='list']/dl/dt[2]/following-sibling::a",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//@href"
+    }
+  },
+  "ᦗ书趣网": {
+    "chapterContent": {
+      "validConfig": "",
+      "content": "//*[@id=\"nr1\"]/p\n|@js:return result.replace(/\\(\\)/g,'')",
+      "actionID": "chapterContent",
+      "moreKeys": {
+        "maxPage": 999
+      },
+      "host": "https://m.22shuquge.net",
+      "httpHeaders": {
+        "Referer": "https://m.22shuquge.net",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "nextPageUrl": "//a[contains(text(),'下一页')]/@href"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM"
+    },
+    "shudanList": {},
+    "bookWorld": {
+      "分类": {
+        "author": "//p[3]|@replace:作者：",
+        "responseFormatType": "html",
+        "bookName": "//h2/a",
+        "httpHeaders": {
+          "Referer": "https://m.22shuquge.net",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+        },
+        "host": "https://m.22shuquge.net",
+        "requestInfo": "@js:\nlet {_type}=params.filters\nlet url=_type.includes('quanben') ?`${config.host}/${_type}/class/${params.pageIndex}.html` :`${config.host}/class/${_type}_${params.pageIndex}.html`;\n\nreturn {url:url,'httpHeaders':config.httpHeaders}",
+        "actionID": "bookWorld",
+        "moreKeys": {
+          "pageSize": 30,
+          "requestFilters": "_type\n玄幻::1\n武侠::2\n都市::3\n历史::4\n科幻::7\n游戏::6\n女生::8\n精品::10\n全本::quanben"
+        },
+        "cover": "//img/@src",
+        "validConfig": "",
+        "list": "//*[@id=\"content\"]/div/div",
+        "_sIndex": 0,
+        "parserID": "DOM",
+        "detailUrl": "//h2/a/@href",
+        "desc": "//p[5]",
+        "status": "//p[4]|@replace:时间："
+      }
+    },
+    "sourceUrl": "https://m.22shuquge.net",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "399",
+    "sourceName": "ᦗ书趣网",
+    "httpHeaders": {
+      "Referer": "https://m.22shuquge.net",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+    },
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "desc": "🎃",
+    "lastModifyTime": "1721531105.437371",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "cat": "//p[4]|@replace:类型：",
+      "author": "//p[3]|@replace:作者：",
+      "responseFormatType": "html",
+      "bookName": "//h2/a",
+      "httpHeaders": {
+        "Referer": "https://m.22shuquge.net",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "requestInfo": "@js:\nreturn {\n    \"url\": config.host+\"/ss/\",\n    \"POST\": true,\n    \"httpParams\": {\n        \"searchkey\": params.keyWord,\n        \"searchtype\": \"all\",\n        \"t_btnsearch\": \"\"\n    },\n    \"httpHeaders\": config.httpHeaders\n}",
+      "host": "https://m.22shuquge.net",
+      "actionID": "searchBook",
+      "detailUrl": "//h2/a/@href",
+      "cover": "//img/@src",
+      "validConfig": "",
+      "list": "//*[@id=\"jieqi_page_contents\"]/div",
+      "parserID": "DOM",
+      "desc": "//p[5]"
+    },
+    "chapterList": {
+      "nextPageUrl": "//a[contains(text(),'下一页')]/@href",
+      "responseFormatType": "html",
+      "url": "//a/@href",
+      "httpHeaders": {
+        "Referer": "https://m.22shuquge.net",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "requestInfo": "@js:\nlet id = params.queryInfo.detailUrl.split('/')[3];\nlet url =params.pageIndex===1 ?`${config.host}/index/${id}/` :`${config.host}/index/${id}/${params.pageIndex}`;\nreturn url",
+      "title": "//a",
+      "actionID": "chapterList",
+      "moreKeys": {
+        "maxPage": 999
+      },
+      "host": "https://m.22shuquge.net",
+      "validConfig": "",
+      "list": "//ul[@class=\"chapter\"]/li",
+      "parserID": "DOM"
+    }
+  },
+  "文墨中文网": {
+    "chapterContent": {
+      "validConfig": "",
+      "content": "//div[@class=\"pt-read-cont\"]/div[2]/p/text()",
+      "actionID": "chapterContent",
+      "moreKeys": {
+        "maxPage": 3
+      },
+      "host": "http://www.maxreader.net/",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "nextPageUrl": "//a[contains(text(),'下一页')]/@href"
+    },
+    "enable": 1,
+    "authorId": "",
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM"
+    },
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookWorld": {},
+    "shudanList": {},
+    "sourceUrl": "http://www.maxreader.net/",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9905",
+    "sourceName": "文墨中文网",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1700387192.701525",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "cat": "//div[1]/div[1]/span[2]/span[2]/a",
+      "author": "//div[1]/div[1]/span[2]/span[1]/a",
+      "lastChapterTitle": "//div[1]/div[3]/span/a/span",
+      "responseFormatType": "html",
+      "bookName": "//div[1]/div[1]/span[1]/a",
+      "requestInfo": "/search/result.html?searchkey=%@keyWord",
+      "host": "http://www.maxreader.net/",
+      "actionID": "searchBook",
+      "detailUrl": "//div[1]/div[1]/span[1]/a/@href",
+      "cover": "//a[1]/img/@src",
+      "validConfig": "",
+      "parserID": "DOM",
+      "list": "//div[@class='pt-rank-detail']"
+    },
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "updateTime": "//meta[@property=\"og:novel:update_time\"]/@content",
+      "requestInfo": "@js: return result.replace('/book/','/read/')",
+      "title": "//a",
+      "host": "http://www.maxreader.net/",
+      "list": "//div[@id=\"readerlists\"]/ul/li",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "看书小说网": {
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "validConfig": "",
+      "status": "//div[@id=\"info\"]/p[5]/text()",
+      "requestInfo": "@js:\n\nlet hh= {\n  \"User-Agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/604.3.5 (KHTML, like Gecko) Version/13.0 Safari/604.1\"\n};\n\nreturn {'url':result, 'POST':false,\"httpHeaders\": config.httpHeaders, forbidCookie:true,cacheTime:3600};",
+      "host": "http://www.kanshu2.com",
+      "httpHeaders": {
+        "Referer": "http://www.kanshu2.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "cover": "//div[@id=\"fmimg\"]/img/@src",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "desc": "//div[@id=\"intro\"]/text()"
+    },
+    "weight": "9902",
+    "miniAppVersion": "2.53.2",
+    "chapterList": {
+      "nextPageUrl": "//div[@id=\"list\"]/dl/div[1]/a[2 and contains(text(),\"下一页\")]/@href",
+      "responseFormatType": "html",
+      "url": "//a/@href",
+      "httpHeaders": {
+        "Referer": "http://www.kanshu2.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "requestInfo": "@js:\r\nlet booknum = params.queryInfo.detailUrl.slice(6,-1);\r\nlet num = Math.ceil(booknum /1000);\r\nlet url = config.host+\"/\"+ num+\"/\"+ booknum+\"/\"+params.pageIndex+\"/\"\r\n\r\nreturn {'url': url, 'POST':false,\"httpHeaders\": config.httpHeaders, forbidCookie:true,cacheTime:3600};",
+      "title": "//a/dd/text()",
+      "actionID": "chapterList",
+      "moreKeys": {
+        "maxPage": 33
+      },
+      "host": "http://www.kanshu2.com",
+      "validConfig": "",
+      "list": "//div[@id=\"list\"]/dl/a",
+      "parserID": "DOM"
+    },
+    "loginUrl": "",
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "enable": 1,
+    "sourceName": "看书小说网",
+    "sourceType": "text",
+    "sourceUrl": "http://www.kanshu2.com",
+    "httpHeaders": {
+      "Referer": "http://www.kanshu2.com",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+    },
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1721573355.772915",
+    "searchBook": {
+      "author": "//span[@class=\"s4\"]/text()",
+      "lastChapterTitle": "//span[@class=\"s3\"]/a/text()",
+      "responseFormatType": "html",
+      "bookName": "//span[@class=\"s2\"]/a/text()",
+      "httpHeaders": {
+        "Referer": "http://www.kanshu2.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "requestInfo": "@js:\nlet url=config.host+\"/search/\";\nlet hp= {\n    \"searchkey\":params.keyWord,\n};\n\nreturn {\n    \"url\": url,\n    \"POST\": true,\n    //\"webView\":true,\n    \"httpParams\": hp,\n    \"httpHeaders\": config.httpHeaders,\n    \"forbidCookie\": true,\n    \"cacheTime\": 600,\n};",
+      "host": "http://www.kanshu2.com",
+      "actionID": "searchBook",
+      "detailUrl": "//span[@class=\"s2\"]/a/@href",
+      "validConfig": "",
+      "parserID": "DOM",
+      "list": "//div[@id=\"newscontent\"]/div[@class=\"l\"]/ul/li"
+    },
+    "chapterContent": {
+      "actionID": "chapterContent",
+      "validConfig": "",
+      "content": "//div[@id = \"content\"]/p",
+      "moreKeys": {
+        "maxPage": 10
+      },
+      "host": "http://www.kanshu2.com",
+      "httpHeaders": {
+        "Referer": "http://www.kanshu2.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36"
+      },
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "nextPageUrl": "/html/body/div[2]/div[2]/a[@id=\"pt_next\"   and contains(text(),\"下一页\")]/@href"
+    },
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    }
+  },
+  "书旗小说": {
+    "chapterContent": {
+      "validConfig": "",
+      "parserID": "DOM",
+      "host": "https://www.shuqi.com",
+      "JSParser": "function functionName(config, jsparams, result)\n{\n\tif(jsparams.lastResponse)\n\t{\n\t\tvar data = JSON.parse(result);\n\t\tvar cpContent = decodeCont(data.ChapterContent);\n\t\treturn {'content':cpContent, 'removeHtmlKeys':'content'};\n\t}\n\n\tvar cid = jsparams.queryInfo.url.match(/cid=(\\d+)/)[1];\n\tvar regex = new RegExp('(\\\\?bookId=[^,]+chapterId=' + cid + '[^,]+num=[^,]+)&quot;');\n\tvar params = result.match(regex);\n\tif(params)\n\t{\n\t\tparams = params[1];\n\n\t\tvar prefix = result.match(/freeContUrlPrefix[^,]+;([^,]+)&quot;/)[1];\n\t\tif(prefix && prefix.length>0 && params.length>0){\n\t\t\tvar url = prefix + params;\n\t\t\turl = String(url).replace(/amp;/g, '');\n\t\t\treturn {'nextPageUrl':url, 'autoRequestMore':true, 'success':true, 'more':true};\n\t\t}\n\t}\n\treturn '无内容，vip章节？请尝试换源！';\n}\n\nfunction decodeCont(r) {\n  return (function(r) {\n    var o,\n      t,\n      e,\n      a,\n      n,\n      C,\n      h = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',\n      d = '',\n      f = 0;\n    for (r = r.replace(/[^A-Za-z0-9\\+\\/\\=]/g, ''); f < r.length; )\n      (o =\n        (h.indexOf(r.charAt(f++)) << 2) |\n        ((a = h.indexOf(r.charAt(f++))) >> 4)),\n        (t = ((15 & a) << 4) | ((n = h.indexOf(r.charAt(f++))) >> 2)),\n        (e = ((3 & n) << 6) | (C = h.indexOf(r.charAt(f++)))),\n        (d += String.fromCharCode(o)),\n        64 != n && (d += String.fromCharCode(t)),\n        64 != C && (d += String.fromCharCode(e));\n    return (function(r) {\n      for (var o, t = '', e = 0, a = 0, n = 0; e < r.length; )\n        (a = r.charCodeAt(e)) < 128\n          ? ((t += String.fromCharCode(a)), e++)\n          : 191 < a && a < 224\n          ? ((n = r.charCodeAt(e + 1)),\n            (t += String.fromCharCode(((31 & a) << 6) | (63 & n))),\n            (e += 2))\n          : ((n = r.charCodeAt(e + 1)),\n            (o = r.charCodeAt(e + 2)),\n            (t += String.fromCharCode(\n              ((15 & a) << 12) | ((63 & n) << 6) | (63 & o)\n            )),\n            (e += 3));\n      return t;\n    })(d);\n  })(\n    (r = r\n      .split('')\n      .map(function(r) {\n        var o, t;\n        return r.match(/[A-Za-z]/)\n          ? ((o = Math.floor(r.charCodeAt(0) / 97)),\n            (t = (r.toLowerCase().charCodeAt(0) - 83) % 26 || 26),\n            String.fromCharCode(t + (0 == o ? 64 : 96)))\n          : r;\n      })\n      .join(''))\n  );\n}",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "actionID": "bookDetail",
+      "parserID": "DOM"
+    },
+    "authorId": "",
+    "shudanList": {},
+    "bookWorld": {
+      "女频": {
+        "cat": "//p[1]/span[1]",
+        "author": "//p[1]/a[1]/span[1]",
+        "responseFormatType": "html",
+        "bookName": "//a[1]/h3[1]",
+        "desc": "//a[1]/p[1]",
+        "requestInfo": "@js:\nlet url = 'https://shuqi.com/store';\nlet hp = {'sz':'female', 'tm':'0', 'page':params.pageIndex};\n\nlet filters = params.filters;\nif(filters.fc)\n\thp.fc = filters.fc;\nif(filters.st)\n\thp.st = filters.st;\nif(filters.wd)\n\thp.wd = filters.wd;\n\nreturn {'url':url, 'httpParams':hp};",
+        "host": "https://www.shuqi.com",
+        "actionID": "bookWorld",
+        "detailUrl": "//a[@target='_blank']/@href",
+        "cover": "//a[1]/img/@src",
+        "moreKeys": {
+          "pageSize": "16",
+          "requestFilters": [
+            {
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "0"
+                },
+                {
+                  "title": "现言",
+                  "value": "现代言情"
+                },
+                {
+                  "title": "古言",
+                  "value": "古代言情"
+                },
+                {
+                  "title": "幻言",
+                  "value": "幻想言情"
+                }
+              ],
+              "key": "fc"
+            },
+            {
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "0"
+                },
+                {
+                  "title": "30万以下",
+                  "value": "6"
+                },
+                {
+                  "title": "30到50万",
+                  "value": "7"
+                },
+                {
+                  "title": "50到100万",
+                  "value": "8"
+                },
+                {
+                  "title": "100到200万",
+                  "value": "9"
+                },
+                {
+                  "title": "200万以上",
+                  "value": "10"
+                }
+              ],
+              "key": "wd"
+            },
+            {
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "0"
+                },
+                {
+                  "title": "连载",
+                  "value": "1"
+                },
+                {
+                  "title": "完结",
+                  "value": "2"
+                }
+              ],
+              "key": "st"
+            }
+          ]
+        },
+        "parserID": "DOM",
+        "validConfig": "",
+        "list": "//div[@class='store-content']/ul/li",
+        "_sIndex": 1
+      },
+      "排行": {
+        "cat": "//div[1]/p[1]/span[2]",
+        "author": "//div[1]/p[1]/span[1]/a",
+        "responseFormatType": "html",
+        "bookName": "//div[1]/a[1]/h3",
+        "desc": "//div[1]/p[2]",
+        "requestInfo": "https://shuqi.com/ranklist?rank=%@filter&page=%@pageIndex",
+        "host": "https://www.shuqi.com",
+        "actionID": "bookWorld",
+        "detailUrl": "//div[1]/a[1]/@href",
+        "cover": "//a[1]/img/@src",
+        "moreKeys": {
+          "pageSize": "10",
+          "requestFilters": [
+            {
+              "items": [
+                {
+                  "title": "新书榜",
+                  "value": "allNew"
+                },
+                {
+                  "title": "完结榜",
+                  "value": "allEnd"
+                },
+                {
+                  "title": "字数榜",
+                  "value": "allWords"
+                },
+                {
+                  "title": "点击榜",
+                  "value": "allClick"
+                },
+                {
+                  "title": "收藏榜",
+                  "value": "allStore"
+                },
+                {
+                  "title": "订阅榜",
+                  "value": "allOrder"
+                },
+                {
+                  "title": "男点击榜",
+                  "value": "boyClick"
+                },
+                {
+                  "title": "女点击榜",
+                  "value": "girlClick"
+                },
+                {
+                  "title": "男收藏榜",
+                  "value": "boyStore"
+                },
+                {
+                  "title": "女收藏榜",
+                  "value": "girlStore"
+                },
+                {
+                  "title": "男订阅榜",
+                  "value": "boyOrder"
+                },
+                {
+                  "title": "女订阅榜",
+                  "value": "girlOrder"
+                },
+                {
+                  "title": "男人气榜",
+                  "value": "boyhot"
+                },
+                {
+                  "title": "女人气榜",
+                  "value": "girlhot"
+                },
+                {
+                  "title": "男新书榜",
+                  "value": "boyNew"
+                },
+                {
+                  "title": "女新书榜",
+                  "value": "girlNew"
+                },
+                {
+                  "title": "男完结榜",
+                  "value": "boyEnd"
+                },
+                {
+                  "title": "女完结榜",
+                  "value": "girlEnd"
+                },
+                {
+                  "title": "男更新榜",
+                  "value": "boyUpdate"
+                },
+                {
+                  "title": "女更新榜",
+                  "value": "girlUpdate"
+                }
+              ],
+              "key": "rank"
+            }
+          ]
+        },
+        "parserID": "DOM",
+        "validConfig": "",
+        "list": "//ul[@class='ranklist-ul']/li",
+        "_sIndex": 2
+      },
+      "男频": {
+        "cat": "//p[1]/span[1]",
+        "author": "//p[1]/a[1]/span[1]",
+        "responseFormatType": "html",
+        "bookName": "//a[1]/h3[1]",
+        "desc": "//a[1]/p[1]",
+        "requestInfo": "@js:\nlet url = 'https://shuqi.com/store';\nlet hp = {'sz':'male', 'tm':'0', 'page':params.pageIndex};\n\nlet filters = params.filters;\nif(filters.fc)\n\thp.fc = filters.fc;\nif(filters.st)\n\thp.st = filters.st;\nif(filters.wd)\n\thp.wd = filters.wd;\n\nreturn {'url':url, 'httpParams':hp};",
+        "host": "https://www.shuqi.com",
+        "actionID": "bookWorld",
+        "detailUrl": "//a[@target='_blank']/@href",
+        "cover": "//a[1]/img/@src",
+        "moreKeys": {
+          "pageSize": "16",
+          "requestFilters": [
+            {
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "0"
+                },
+                {
+                  "title": "玄幻",
+                  "value": "玄幻小说"
+                },
+                {
+                  "title": "奇幻",
+                  "value": "奇幻小说"
+                },
+                {
+                  "title": "仙侠",
+                  "value": "仙侠小说"
+                },
+                {
+                  "title": "武侠",
+                  "value": "武侠小说"
+                },
+                {
+                  "title": "都市",
+                  "value": "都市小说"
+                },
+                {
+                  "title": "耽美",
+                  "value": "耽美小说"
+                },
+                {
+                  "title": "科幻",
+                  "value": "科幻小说"
+                },
+                {
+                  "title": "灵异",
+                  "value": "灵异推理"
+                },
+                {
+                  "title": "历史",
+                  "value": "历史架空"
+                },
+                {
+                  "title": "游戏",
+                  "value": "游戏竞技"
+                },
+                {
+                  "title": "竞技",
+                  "value": "竞技体育"
+                }
+              ],
+              "key": "fc"
+            },
+            {
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "0"
+                },
+                {
+                  "title": "30万以下",
+                  "value": "6"
+                },
+                {
+                  "title": "30到50万",
+                  "value": "7"
+                },
+                {
+                  "title": "50到100万",
+                  "value": "8"
+                },
+                {
+                  "title": "100到200万",
+                  "value": "9"
+                },
+                {
+                  "title": "200万以上",
+                  "value": "10"
+                }
+              ],
+              "key": "wd"
+            },
+            {
+              "items": [
+                {
+                  "title": "全部",
+                  "value": "0"
+                },
+                {
+                  "title": "连载",
+                  "value": "1"
+                },
+                {
+                  "title": "完结",
+                  "value": "2"
+                }
+              ],
+              "key": "st"
+            }
+          ]
+        },
+        "parserID": "DOM",
+        "validConfig": "",
+        "list": "//div[@class='store-content']/ul/li",
+        "_sIndex": 0
+      }
+    },
+    "sourceUrl": "https://www.shuqi.com",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "1000002",
+    "sourceName": "书旗小说",
+    "desc": "只用于看榜单",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "lastModifyTime": "1700387136.491601",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "author": "//p[@class='book-autor']/a || //span[@class='bauthor'] || @replace:作者： || @replace:   著",
+      "responseFormatType": "html",
+      "bookName": "//h3[@class='ellipsis'] || //span[@class='bname']",
+      "desc": "//p[@class='book-newc'] || //p[@class='bookDesc']",
+      "requestInfo": "/search?keyword=%@keyWord&page=%@pageIndex",
+      "host": "https://www.shuqi.com",
+      "actionID": "searchBook",
+      "detailUrl": "//p[@class='bookTitle']/a/@href || //a[@target='_blank']/@href",
+      "moreKeys": {
+        "pageSize": 9
+      },
+      "cover": "//img[1]/@src",
+      "parserID": "DOM",
+      "validConfig": "",
+      "list": "//div[@class='matchbook']/div || //div[@class='searchlist-main']/ul/li"
+    },
+    "chapterList": {
+      "actionID": "chapterList",
+      "validConfig": "",
+      "requestInfo": "@js:\nlet url = params.queryInfo.detailUrl;\nlet index = url.indexOf('bid=');\nif(index>=0)\n\turl = url.substr(index+4);\nreturn 'https://www.shuqi.com' + url;",
+      "title": "//a",
+      "host": "https://www.shuqi.com",
+      "list": "//table//td",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href"
+    }
+  },
+  "必去小说网": {
+    "chapterContent": {
+      "validConfig": "",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "host": "http://www.biquw.la",
+      "content": "//*[@id=\"htmlContent\"]/text()",
+      "actionID": "chapterContent"
+    },
+    "enable": 1,
+    "shupingList": {
+      "actionID": "shupingList",
+      "parserID": "DOM"
+    },
+    "bookDetail": {
+      "validConfig": "",
+      "actionID": "bookDetail",
+      "host": "http://www.biquw.la",
+      "cover": "//div[@class=\"pic\"]/img/@src",
+      "responseFormatType": "html",
+      "desc": "//h3",
+      "parserID": "DOM"
+    },
+    "shudanList": {},
+    "bookWorld": {},
+    "sourceUrl": "http://www.biquw.la",
+    "relatedWord": {
+      "actionID": "relatedWord",
+      "parserID": "DOM"
+    },
+    "weight": "9911",
+    "sourceName": "必去小说网",
+    "desc": "🍋-23.11",
+    "miniAppVersion": "2.53.2",
+    "shudanDetail": {
+      "actionID": "shudanDetail",
+      "parserID": "DOM"
+    },
+    "password": "1513",
+    "lastModifyTime": "1700387561.883000",
+    "shupingHome": {
+      "actionID": "shupingHome",
+      "parserID": "DOM"
+    },
+    "searchShudan": {
+      "actionID": "searchShudan",
+      "parserID": "DOM"
+    },
+    "searchBook": {
+      "author": "//p[3]",
+      "responseFormatType": "html",
+      "bookName": "//p[1]/a/text()",
+      "requestInfo": "@js:\n\nlet url =config.host+\"/modules/article/search.php\";\n\nlet hp={'searchkey':params.keyWord,'action':'login'};\n\nreturn{'url':url,'GET':false,'httpParams':hp,\"httpHeaders\":config.httpHeaders,forbidCookie:true,cacheTime:3600};",
+      "host": "http://www.biquw.la",
+      "actionID": "searchBook",
+      "detailUrl": "//p[1]/a/@href",
+      "wordCount": "//p[4]",
+      "validConfig": "",
+      "list": "//div[2]/ul/li",
+      "parserID": "DOM",
+      "status": "//p[5]"
+    },
+    "chapterList": {
+      "validConfig": "",
+      "actionID": "chapterList",
+      "title": "//a",
+      "host": "http://www.biquw.la",
+      "list": "//div[@class=\"book_list\"]/ul/li",
+      "responseFormatType": "html",
+      "parserID": "DOM",
+      "url": "//a/@href ||@js:return params.responseUrl+result"
+    }
+  }
+}
